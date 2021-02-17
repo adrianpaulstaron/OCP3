@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "RailwayLight";
+    src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap") format("truetype");
+}
+
+.textregular {
+    font-family: 'Roboto', sans-serif;
+}
+
+#logodiv {
+    box-shadow: 0 4px 4px 0px #dbdbdb;
+    background-color: white;
+}
+
+#logo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+header {
+    text-align: center;
+    margin-left: -8px;
+    margin-right: -8px;
+    background-color: #EDEDED;
+}
+
+#location {
+    /* background-color: #EDEDED; */
+    padding: 20px;
+}
+
+.mapmarker {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -46px;
+    /* sur la maquette, la location est centrée, on offset donc le map marker vers la gauche d'autant de pixels qu'il fait de large (26px + 2x10px de padding) pour qu'il n'offset pas la location vers la droite */
+}
+
+#explore {
+    background-color: #F7F7F7;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin: 0px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#explorebutton {
+    margin-top: 20px;
+    padding: 15px;
+    width: 200px;
+    border-radius: 30px;
+    background: linear-gradient(#FF79DA,#9356DC);
+    color: white;
+    font-weight: bold;
+}
