@@ -3,7 +3,7 @@
     src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap") format("truetype");
 }
 
-.textregular {
+.text {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -58,4 +58,59 @@ h2 {
     background: linear-gradient(#FF79DA,#9356DC);
     color: white;
     font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/*================== fonctionnement ==================*/
+
+#operation {
+    padding-top: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.operationbutton {
+    padding: 20px;
+    width: 250px;
+    border-radius: 20px;
+    background-color: #F7F7F7;
+    box-shadow: 1px 1px 10px #dbdbdb;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.operationicon {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: -12px;
+    width: 30px;
+    /* sur la maquette, la location est centrée, on offset donc le map marker vers la gauche d'autant de pixels qu'il fait de large (26px + 2x10px de padding) pour qu'il n'offset pas la location vers la droite */
+}
+
+.operationnumbercontainerdiv {
+    width: 0px;
+    /* cette div existe simple pour que sa div fille, operationnumber, ne pousse pas les autres éléments du bouton; elle a donc une width de 0px */
+}
+
+.operationnumber {
+    margin-left: -38px;
+    width: 33px;
+    height: 31px;
+    color: white;
+    background-color: #9356DC;
+    padding-top: 2px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.operationtext {
+    padding-left: 40px;
 }
