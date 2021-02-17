@@ -24,9 +24,6 @@ header {
     background-color: #EDEDED;
 }
 
-body {
-}
-
 #location {
     /* background-color: #EDEDED; */
     padding: 20px;
@@ -64,6 +61,11 @@ h2 {
     margin-bottom: 40px;
 }
 
+#explorebutton:hover {
+    cursor: pointer;
+    background: #dabcff;
+}
+
 /*================== fonctionnement ==================*/
 
 #operation {
@@ -73,7 +75,6 @@ h2 {
     align-items: center;
     margin-left: -8px;
     margin-right: -8px;
-
 }
 
 #operationtitle {
@@ -92,6 +93,12 @@ h2 {
     align-items: center;
     margin-bottom: 20px;
 }
+
+.operationbutton:hover {
+    cursor: pointer;
+    background: #dabcff;
+}
+
 
 .operationicon {
     padding-left: 20px;
@@ -135,5 +142,4 @@ h2 {
     background-color: #F7F7F7;
     margin-left: -8px;
     margin-right: -8px;
-
 }
