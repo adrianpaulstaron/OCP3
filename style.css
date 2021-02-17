@@ -63,7 +63,7 @@ h2 {
 
 #explorebutton:hover {
     cursor: pointer;
-    background: #dabcff;
+    background: #FF79DA;
 }
 
 /*================== fonctionnement ==================*/
@@ -96,7 +96,7 @@ h2 {
 
 .operationbutton:hover {
     cursor: pointer;
-    background: #dabcff;
+    background: #f0e5ff;
 }
 
 
