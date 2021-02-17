@@ -38,7 +38,7 @@ header {
 
 #explore {
     background-color: #F7F7F7;
-    padding: 20px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,11 +64,14 @@ h2 {
 /*================== fonctionnement ==================*/
 
 #operation {
-    padding-top: 20px;
-    margin: 10px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#operationtitle {
+    width: 330px;
 }
 
 .operationbutton {
@@ -113,4 +116,12 @@ h2 {
 
 .operationtext {
     padding-left: 40px;
+}
+
+
+/*================== restaurants ==================*/
+
+#restaurants {
+    margin: 10px;
+
 }
