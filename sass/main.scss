@@ -114,6 +114,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     ul.operationlist>li {
         padding: 20px;
         margin-left: -22px;
@@ -173,26 +174,37 @@ footer {
         width: 309px;
         background-color: $colour-background-alt;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         padding: 0px;
+        li {
+            padding-bottom: 25px;
+
+        }
         figure {
+            object-fit: cover;
             box-shadow: 5px 5px 10px $colour-box-shadow;
             border-radius: $border-radius;
             margin: 0px;
             .restaurantpicture {
-                width: 100%;
+                width: 309px;
+                height: 200px;
+                object-fit: cover;
                 border-top-left-radius: $border-radius;
                 border-top-right-radius: $border-radius;
-            };
+            }
             figcaption {
                 padding: 15px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+                .text {
+                    padding: 3px;
+                }
             }
             .fa-heart {
                 font-size: 25px;
+                padding-top: 9px;
             }
         }
     }
