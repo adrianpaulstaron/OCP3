@@ -312,9 +312,23 @@ html {
   padding: 0px;
 }
 
+.sectiontitle {
+  width: 312px;
+}
+
 body {
   margin: 0px;
   padding: 0px;
+}
+
+h2 {
+  margin: 0px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+li {
+  list-style-type: none;
 }
 
 footer {
@@ -325,40 +339,29 @@ footer {
   padding-bottom: 0px;
   color: white;
 }
-
-li {
-  list-style-type: none;
+footer #logolight {
+  width: 130px;
 }
-
-figure {
-  margin: 0px;
+footer .footerlist {
+  padding-left: 0px;
 }
-
-figcaption {
-  padding: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.icon {
-  font-size: 25px;
-}
-
-.footericon {
+footer .footericon {
   width: 20px;
   height: 20px;
 }
-
-.handshake {
+footer .handshake {
   rotate: -45deg;
   font-size: 15px;
 }
-
-.restaurantpicture {
-  width: 100%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+footer ul.footerlist > li {
+  padding-bottom: 10px;
+}
+footer ul.footerlist > li > a {
+  color: white;
+  text-decoration: none;
+}
+footer ul.footerlist > li > a:hover {
+  color: #e6e6e6;
 }
 
 .text {
@@ -374,26 +377,10 @@ figcaption {
   padding-bottom: 20px;
 }
 
-.my-svg-alternate {
-  display: none;
-}
-
-.no-svg .my-svg-alternate {
-  display: block;
-  width: 100px;
-  height: 100px;
-}
-
-#logolight {
-  width: 130px;
-}
-
 #location {
-  /* background-color: #EDEDED; */
   padding: 20px;
 }
-
-.mapmarker {
+#location .mapmarker {
   padding-left: 10px;
   padding-right: 10px;
   margin-left: -46px;
@@ -408,12 +395,6 @@ figcaption {
   align-items: center;
 }
 
-h2 {
-  margin: 0px;
-  margin-bottom: 20px;
-  font-size: 20px;
-}
-
 /*================== fonctionnement ==================*/
 #operation {
   padding: 30px;
@@ -421,12 +402,7 @@ h2 {
   flex-direction: column;
   align-items: center;
 }
-
-#operationtitle {
-  width: 330px;
-}
-
-ul.operationlist > li {
+#operation ul.operationlist > li {
   padding: 20px;
   margin-left: -22px;
   width: 250px;
@@ -438,54 +414,11 @@ ul.operationlist > li {
   align-items: center;
   margin-bottom: 20px;
 }
-
-ul.operationlist > li:hover {
-  cursor: pointer;
-  background-color: #f2eafb;
-}
-
-.footerlist {
-  padding-left: 0px;
-}
-
-ul.footerlist > li {
-  padding-bottom: 10px;
-}
-
-ul.footerlist > li > a {
-  color: white;
-  text-decoration: none;
-}
-
-ul.footerlist > li > a:hover {
-  color: #e6e6e6;
-}
-
-.restaurantlist {
-  width: 309px;
-  border-radius: 20px;
-  background-color: #F7F7F7;
-  box-shadow: 5px 5px 10px #dbdbdb;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-}
-
-.operationbutton__container {
+#operation ul.operationlist > li .operationbutton__container {
   width: 0px;
   /* cette div existe simple pour que sa div fille, operationnumber (ou la div de l'icône fontawesome), ne pousse pas les autres éléments du bouton; elle a donc une width de 0px */
 }
-
-.operationbutton__icon {
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: -12px;
-  width: 30px;
-  /* sur la maquette, la location est centrée, on offset donc le map marker vers la gauche d'autant de pixels qu'il fait de large (26px + 2x10px de padding) pour qu'il n'offset pas la location vers la droite */
-}
-
-.operationbutton__number {
+#operation ul.operationlist > li .operationbutton__container .operationbutton__number {
   margin-left: -38px;
   width: 34px;
   height: 31px;
@@ -498,9 +431,19 @@ ul.footerlist > li > a:hover {
   justify-content: center;
   align-items: center;
 }
-
-.operationbutton__text {
+#operation ul.operationlist > li .operationbutton__container .operationbutton__icon {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: -12px;
+  width: 30px;
+  /* sur la maquette, la location est centrée, on offset donc le map marker vers la gauche d'autant de pixels qu'il fait de large (26px + 2x10px de padding) pour qu'il n'offset pas la location vers la droite */
+}
+#operation ul.operationlist > li .operationbutton__text {
   padding-left: 40px;
+}
+#operation ul.operationlist > li:hover {
+  cursor: pointer;
+  background-color: #f2eafb;
 }
 
 /*================== restaurants ==================*/
@@ -510,6 +453,33 @@ ul.footerlist > li > a:hover {
   flex-direction: column;
   align-items: center;
   background-color: #F7F7F7;
+}
+#restaurants .restaurantlist {
+  width: 309px;
+  background-color: #F7F7F7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+}
+#restaurants .restaurantlist figure {
+  box-shadow: 5px 5px 10px #dbdbdb;
+  border-radius: 20px;
+  margin: 0px;
+}
+#restaurants .restaurantlist figure .restaurantpicture {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+#restaurants .restaurantlist figure figcaption {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#restaurants .restaurantlist figure .fa-heart {
+  font-size: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

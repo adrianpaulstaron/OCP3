@@ -23,11 +23,25 @@ html {
     margin: 0px;
     padding: 0px;
 }
+.sectiontitle {
+    width: 312px;
+}
 
 body{
     margin: 0px;
     padding: 0px;
 }
+
+h2 {
+    margin: 0px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+li {
+    list-style-type: none;
+}
+
 footer {
     display: flex;
     flex-direction: column;
@@ -35,41 +49,30 @@ footer {
     padding: 30px;
     padding-bottom: 0px;
     color:white;
-}
-
-li {
-    list-style-type: none;
-}
-
-figure {
-    margin: 0px;
-}
-
-figcaption {
-    padding: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.icon {
-    font-size: 25px;
-}
-
-.footericon {
-    width: 20px;
-    height: 20px;
-}
-
-.handshake {
-    rotate: -45deg;
-    font-size: 15px;
-}
-
-.restaurantpicture {
-    width: 100%;
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
+    #logolight {
+        width: 130px;
+    }
+    .footerlist {
+        padding-left: 0px;
+    }
+    .footericon {
+        width: 20px;
+        height: 20px;
+    }
+    .handshake {
+        rotate: -45deg;
+        font-size: 15px;
+    }
+    ul.footerlist>li{
+        padding-bottom: 10px;
+    }
+    ul.footerlist>li>a{
+        color: white;
+        text-decoration: none;
+    }
+    ul.footerlist>li>a:hover {
+        @include darker-colour(color, false, white);
+    }
 }
 
 .text {
@@ -84,30 +87,15 @@ figcaption {
         padding-bottom: 20px;
     }
 }
-.my-svg-alternate {
-    display: none;
-}
-.no-svg .my-svg-alternate {
-    display: block;
-    width: 100px;
-    height: 100px;
-}
-
-
-#logolight {
-    width: 130px;
-}
 
 #location {
-    /* background-color: #EDEDED; */
     padding: 20px;
-}
-
-.mapmarker {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: -46px;
-    /* sur la maquette, la location est centrée, on offset donc le map marker vers la gauche d'autant de pixels qu'il fait de large (26px + 2x10px de padding) pour qu'il n'offset pas la location vers la droite */
+    .mapmarker {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: -46px;
+        /* sur la maquette, la location est centrée, on offset donc le map marker vers la gauche d'autant de pixels qu'il fait de large (26px + 2x10px de padding) pour qu'il n'offset pas la location vers la droite */
+    }
 }
 
 #explore {
@@ -119,12 +107,6 @@ figcaption {
 
 }
 
-h2 {
-    margin: 0px;
-    margin-bottom: 20px;
-    font-size: 20px;
-}
-
 /*================== fonctionnement ==================*/
 
 #operation {
@@ -132,93 +114,50 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // margin-left: -8px;
-    // margin-right: -8px;
+    ul.operationlist>li {
+        padding: 20px;
+        margin-left: -22px;
+        width: 250px;
+        border-radius: $border-radius;
+        background-color: $colour-background-alt;
+        box-shadow: 5px 5px 10px $colour-box-shadow;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;    
+        .operationbutton__container {
+            width: 0px;
+            /* cette div existe simple pour que sa div fille, operationnumber (ou la div de l'icône fontawesome), ne pousse pas les autres éléments du bouton; elle a donc une width de 0px */
+            .operationbutton__number {
+                margin-left: -38px;
+                width: 34px;
+                height: 31px;
+                color: white;
+                background-color: $colour-secondary;
+                padding-top: 2px;
+                border-radius: 50%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .operationbutton__icon {
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-left: -12px;
+                width: 30px;
+                /* sur la maquette, la location est centrée, on offset donc le map marker vers la gauche d'autant de pixels qu'il fait de large (26px + 2x10px de padding) pour qu'il n'offset pas la location vers la droite */
+            }
+        }
+        .operationbutton__text {
+            padding-left: 40px;
+        }
+    }
+    ul.operationlist>li:hover {
+        cursor: pointer;
+        @include lighter-background();
+    }
 }
-
-#operationtitle {
-    width: 330px;
-}
-
-ul.operationlist>li {
-    padding: 20px;
-    margin-left: -22px;
-    width: 250px;
-    border-radius: $border-radius;
-    background-color: $colour-background-alt;
-    box-shadow: 5px 5px 10px $colour-box-shadow;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-ul.operationlist>li:hover {
-    cursor: pointer;
-    @include lighter-background();
-}
-
-.footerlist {
-    padding-left: 0px;
-}
-
-ul.footerlist>li{
-    padding-bottom: 10px;
-
-}
-
-ul.footerlist>li>a{
-    color: white;
-    text-decoration: none;
-}
-
-ul.footerlist>li>a:hover {
-    @include darker-colour(color, false, white);
-}
-
-.restaurantlist {
-    width: 309px;
-    border-radius: $border-radius;
-    background-color: $colour-background-alt;
-    box-shadow: 5px 5px 10px $colour-box-shadow;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-}
-
-
-.operationbutton__container {
-    width: 0px;
-    /* cette div existe simple pour que sa div fille, operationnumber (ou la div de l'icône fontawesome), ne pousse pas les autres éléments du bouton; elle a donc une width de 0px */
-}
-
-.operationbutton__icon {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: -12px;
-    width: 30px;
-    /* sur la maquette, la location est centrée, on offset donc le map marker vers la gauche d'autant de pixels qu'il fait de large (26px + 2x10px de padding) pour qu'il n'offset pas la location vers la droite */
-}
-
-.operationbutton__number {
-    margin-left: -38px;
-    width: 34px;
-    height: 31px;
-    color: white;
-    background-color: $colour-secondary;
-    padding-top: 2px;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.operationbutton__text {
-    padding-left: 40px;
-}
-
 
 /*================== restaurants ==================*/
 
@@ -230,4 +169,31 @@ ul.footerlist>li>a:hover {
     background-color: $colour-background-alt;
     // margin-left: -8px;
     // margin-right: -8px;
+    .restaurantlist {
+        width: 309px;
+        background-color: $colour-background-alt;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        figure {
+            box-shadow: 5px 5px 10px $colour-box-shadow;
+            border-radius: $border-radius;
+            margin: 0px;
+            .restaurantpicture {
+                width: 100%;
+                border-top-left-radius: $border-radius;
+                border-top-right-radius: $border-radius;
+            };
+            figcaption {
+                padding: 15px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .fa-heart {
+                font-size: 25px;
+            }
+        }
+    }
 }
