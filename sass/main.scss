@@ -1,0 +1,224 @@
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions";
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./components/buttons";
+
+@import "./layout/header";
+@import "./layout/nav";
+@import "./layout/container";
+@import "./layout/form";
+
+/* 
+@import "./pages/work";
+ */
+@import "./pages/about";
+@import "./pages/project";
+
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #3f3f3f;
+    padding: 30px;
+    color:white;
+}
+
+li {
+    list-style-type: none;
+}
+
+figure {
+    margin: 0px;
+}
+
+figcaption {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.icon {
+    font-size: 25px;
+}
+
+.footericon {
+    width: 25px;
+}
+
+
+
+.restaurantpicture {
+    width: 100%;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+}
+
+.text {
+    font-family: 'Roboto', sans-serif;
+}
+
+#logodiv {
+    box-shadow: 0px 4px 4px $colour-box-shadow;
+    background-color: $colour-background;
+    #logo {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+.my-svg-alternate {
+    display: none;
+}
+.no-svg .my-svg-alternate {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+
+#logolight {
+    width: 130px;
+}
+
+#location {
+    /* background-color: #EDEDED; */
+    padding: 20px;
+}
+
+.mapmarker {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -46px;
+    /* sur la maquette, la location est centrée, on offset donc le map marker vers la gauche d'autant de pixels qu'il fait de large (26px + 2x10px de padding) pour qu'il n'offset pas la location vers la droite */
+}
+
+#explore {
+    background-color: $colour-background-alt;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+h2 {
+    margin: 0px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/*================== fonctionnement ==================*/
+
+#operation {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // margin-left: -8px;
+    // margin-right: -8px;
+}
+
+#operationtitle {
+    width: 330px;
+}
+
+ul.operationlist>li {
+    padding: 20px;
+    margin-left: -22px;
+    width: 250px;
+    border-radius: $border-radius;
+    background-color: $colour-background-alt;
+    box-shadow: 5px 5px 10px $colour-box-shadow;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+ul.operationlist>li:hover {
+    cursor: pointer;
+    @include lighter-background();
+}
+
+.footerlist {
+    padding-left: 0px;
+}
+
+ul.footerlist>li{
+    padding-bottom: 10px;
+
+}
+
+ul.footerlist>li>a{
+    color: white;
+    text-decoration: none;
+}
+
+.restaurantlist {
+    width: 309px;
+    border-radius: $border-radius;
+    background-color: $colour-background-alt;
+    box-shadow: 5px 5px 10px $colour-box-shadow;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+}
+
+
+.operationbutton__container {
+    width: 0px;
+    /* cette div existe simple pour que sa div fille, operationnumber (ou la div de l'icône fontawesome), ne pousse pas les autres éléments du bouton; elle a donc une width de 0px */
+}
+
+.operationbutton__icon {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: -12px;
+    width: 30px;
+    /* sur la maquette, la location est centrée, on offset donc le map marker vers la gauche d'autant de pixels qu'il fait de large (26px + 2x10px de padding) pour qu'il n'offset pas la location vers la droite */
+}
+
+.operationbutton__number {
+    margin-left: -38px;
+    width: 34px;
+    height: 31px;
+    color: white;
+    background-color: $colour-secondary;
+    padding-top: 2px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.operationbutton__text {
+    padding-left: 40px;
+}
+
+
+/*================== restaurants ==================*/
+
+#restaurants {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $colour-background-alt;
+    // margin-left: -8px;
+    // margin-right: -8px;
+}

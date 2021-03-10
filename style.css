@@ -81,7 +81,7 @@ h2 {
     width: 330px;
 }
 
-.operationbutton {
+ul.operationlist>li {
     padding: 20px;
     width: 250px;
     border-radius: 20px;
@@ -89,18 +89,21 @@ h2 {
     box-shadow: 1px 1px 10px #dbdbdb;
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     align-items: center;
     margin-bottom: 20px;
 }
 
-.operationbutton:hover {
+ul.operationlist>li:hover {
     cursor: pointer;
     background: #f0e5ff;
 }
 
+.operationbutton__container {
+    width: 0px;
+    /* cette div existe simple pour que sa div fille, operationnumber (ou la div de l'icône fontawesome), ne pousse pas les autres éléments du bouton; elle a donc une width de 0px */
+}
 
-.operationicon {
+.operationbutton__icon {
     padding-left: 20px;
     padding-right: 20px;
     margin-left: -12px;
@@ -108,12 +111,7 @@ h2 {
     /* sur la maquette, la location est centrée, on offset donc le map marker vers la gauche d'autant de pixels qu'il fait de large (26px + 2x10px de padding) pour qu'il n'offset pas la location vers la droite */
 }
 
-.operationnumbercontainerdiv {
-    width: 0px;
-    /* cette div existe simple pour que sa div fille, operationnumber, ne pousse pas les autres éléments du bouton; elle a donc une width de 0px */
-}
-
-.operationnumber {
+.operationbutton__number {
     margin-left: -38px;
     width: 33px;
     height: 31px;
@@ -127,7 +125,7 @@ h2 {
     align-items: center;
 }
 
-.operationtext {
+.operationbutton__text {
     padding-left: 40px;
 }
 

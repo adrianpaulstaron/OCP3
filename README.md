@@ -1,6 +1,3 @@
+# Produce maintainable CSS stylesheets with SASS
 
-# Projet 3: Dynamisez une page web avec des animations CSS
-
-[Lien GitHub Pages.](https://adrianpaulstaron.github.io/OCP3/)
-
-Le troisième projet du parcours Développeur Web que je suis en alternance avec OpenClassrooms.
+CSS is the palette we use to paint the web, making pages beautiful, identifiable, and responsive. In this class we’ll learn to write clean, maintainable, and modular CSS code through the implementation of designed naming and file structures, such as BEM, and the use of SASS, a CSS precompiler.

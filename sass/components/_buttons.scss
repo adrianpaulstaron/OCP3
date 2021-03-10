@@ -1,0 +1,73 @@
+#explorebutton {
+    margin-top: 20px;
+    padding: 15px;
+    width: 200px;
+    border-radius: 30px;
+    background: linear-gradient($colour-primary, $colour-secondary);
+    color: $colour-background;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+#explorebutton:hover {
+    cursor: pointer;
+    @include darker-colour(background, true);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .btn {
+    @include btn
+}
+ */
