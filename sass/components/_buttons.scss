@@ -1,4 +1,4 @@
-#explorebutton {
+.button {
     margin-top: 20px;
     padding: 15px;
     width: 200px;
@@ -8,7 +8,7 @@
     font-weight: bold;
     margin-bottom: 40px;
 }
-#explorebutton:hover {
+.button:hover {
     cursor: pointer;
     @include darker-colour(background, true);
 }

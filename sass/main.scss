@@ -33,6 +33,7 @@ footer {
     flex-direction: column;
     background-color: #3f3f3f;
     padding: 30px;
+    padding-bottom: 0px;
     color:white;
 }
 
@@ -56,10 +57,14 @@ figcaption {
 }
 
 .footericon {
-    width: 25px;
+    width: 20px;
+    height: 20px;
 }
 
-
+.handshake {
+    rotate: -45deg;
+    font-size: 15px;
+}
 
 .restaurantpicture {
     width: 100%;
@@ -165,6 +170,10 @@ ul.footerlist>li{
 ul.footerlist>li>a{
     color: white;
     text-decoration: none;
+}
+
+ul.footerlist>li>a:hover {
+    @include darker-colour(color, false, white);
 }
 
 .restaurantlist {
