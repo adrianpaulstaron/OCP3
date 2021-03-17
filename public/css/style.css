@@ -166,6 +166,10 @@ header {
   background-color: #EDEDED;
 }
 
+header a:active .button {
+  background: linear-gradient(#ff46cc, #782cd3);
+}
+
 #logodiv {
   box-shadow: 0px 4px 4px #dbdbdb;
   background-color: white;
