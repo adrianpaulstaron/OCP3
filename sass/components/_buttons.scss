@@ -1,12 +1,15 @@
 .button {
     margin-top: 20px;
     padding: 15px;
-    width: 200px;
+    padding-right: 25px;
+    padding-left: 25px;
+
     border-radius: 30px;
     background: linear-gradient($colour-primary, $colour-secondary);
     color: $colour-background;
     font-weight: bold;
     margin-bottom: 40px;
+    text-align: center;
 }
 .button:hover {
     cursor: pointer;

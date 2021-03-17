@@ -1,0 +1,32 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #3f3f3f;
+    padding: 30px;
+    padding-bottom: 0px;
+    color:white;
+    #logolight {
+        width: 130px;
+    }
+    .footerlist {
+        padding-left: 0px;
+    }
+    .footericon {
+        width: 20px;
+        height: 20px;
+    }
+    .handshake {
+        rotate: -45deg;
+        font-size: 15px;
+    }
+    ul.footerlist>li{
+        padding-bottom: 10px;
+    }
+    ul.footerlist>li>a{
+        color: white;
+        text-decoration: none;
+    }
+    ul.footerlist>li>a:hover {
+        @include darker-colour(color, false, white);
+    }
+}

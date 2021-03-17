@@ -12,6 +12,7 @@
 @import "./layout/nav";
 @import "./layout/container";
 @import "./layout/form";
+@import "./layout/footer";
 
 /* 
 @import "./pages/work";
@@ -19,92 +20,85 @@
 @import "./pages/about";
 @import "./pages/project";
 
-html {
-    margin: 0px;
-    padding: 0px;
-}
-.sectiontitle {
-    width: 312px;
-}
-
-body{
-    margin: 0px;
-    padding: 0px;
-}
-
-h2 {
-    margin: 0px;
-    margin-bottom: 20px;
-    font-size: 20px;
-}
-
-li {
-    list-style-type: none;
-}
-
-footer {
-    display: flex;
-    flex-direction: column;
-    background-color: #3f3f3f;
-    padding: 30px;
-    padding-bottom: 0px;
-    color:white;
-    #logolight {
-        width: 130px;
-    }
-    .footerlist {
-        padding-left: 0px;
-    }
-    .footericon {
-        width: 20px;
-        height: 20px;
-    }
-    .handshake {
-        rotate: -45deg;
-        font-size: 15px;
-    }
-    ul.footerlist>li{
-        padding-bottom: 10px;
-    }
-    ul.footerlist>li>a{
-        color: white;
-        text-decoration: none;
-    }
-    ul.footerlist>li>a:hover {
-        @include darker-colour(color, false, white);
-    }
-}
-
 .text {
     font-family: 'Roboto', sans-serif;
 }
 
-#logodiv {
-    box-shadow: 0px 4px 4px $colour-box-shadow;
-    background-color: $colour-background;
-    #logo {
-        padding-top: 20px;
-        padding-bottom: 20px;
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.menusection{
+    margin-top: -55px;
+    background-color: yellowgreen;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+}
+
+.menucoursetitle {
+    font-weight: lighter;
+    width: 100%;
+    #menucoursetitledivider{
+        margin-top: 2px;
+        height: 3px;
+        width: 40px;
+        background-color: $color-accent;
     }
 }
 
-#location {
-    padding: 20px;
-    .mapmarker {
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-left: -46px;
-        /* sur la maquette, la location est centrée, on offset donc le map marker vers la gauche d'autant de pixels qu'il fait de large (26px + 2x10px de padding) pour qu'il n'offset pas la location vers la droite */
+.menulist {
+    padding: 0px; 
+    width: 100%;
+    li {
+        box-shadow: 5px 5px 10px $colour-box-shadow;
+        margin-bottom: 25px;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: $border-radius;
+        background-color: $colour-background;
+        .menulistitem {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            .dish {
+                padding-left: 15px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border-top-left-radius: $border-radius;
+                border-top-right-radius: $border-radius;
+                height: 50%;
+                // background-color: yellowgreen;
+            }
+            .dishdescription {
+                padding-left: 15px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom-left-radius: $border-radius;
+                height: 50%;
+                // background-color: yellow;
+                border-bottom-right-radius: $border-radius;
+                .dishprice {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding-right: 15px;
+                    border-bottom-right-radius: $border-radius;
+                    height: 100%;
+                    // background-color: blue;
+                }
+            }
+        }
     }
-}
-
-#explore {
-    background-color: $colour-background-alt;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
 }
 
 /*================== fonctionnement ==================*/
@@ -125,10 +119,12 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-bottom: 20px;    
+        margin-bottom: 20px;   
+
         .operationbutton__container {
             width: 0px;
             /* cette div existe simple pour que sa div fille, operationnumber (ou la div de l'icône fontawesome), ne pousse pas les autres éléments du bouton; elle a donc une width de 0px */
+
             .operationbutton__number {
                 margin-left: -38px;
                 width: 34px;
@@ -142,6 +138,7 @@ footer {
                 justify-content: center;
                 align-items: center;
             }
+
             .operationbutton__icon {
                 padding-left: 20px;
                 padding-right: 20px;
@@ -160,9 +157,11 @@ footer {
     }
 }
 
+/*=================== headerpic ===================*/
+
 /*================== restaurants ==================*/
 
-#restaurants {
+.mainsection {
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -179,7 +178,6 @@ footer {
         padding: 0px;
         li {
             padding-bottom: 25px;
-
         }
         figure {
             object-fit: cover;
