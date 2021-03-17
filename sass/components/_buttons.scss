@@ -11,10 +11,10 @@
     margin-bottom: 40px;
     text-align: center;
 }
-.button:hover {
-    cursor: pointer;
-    @include darker-colour(background, true);
-}
+// .button:hover {
+//     cursor: pointer;
+//     @include darker-colour(background, true);
+// }
 // .button:active {
 //     background-color: blue;
 // }

@@ -3,13 +3,17 @@ header {
     text-align: center;
     background-color: #EDEDED;
 }
-header {
+    a:hover {
+        .button {
+                cursor: pointer;
+                @include darker-colour(background, true);
+            }
+    }
     a:active { 
         .button {
             @include darker-colour(background, true);
         }
     }
-}
 
 #logodiv {
     box-shadow: 0px 4px 4px $colour-box-shadow;

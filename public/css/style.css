@@ -152,11 +152,6 @@ button {
   text-align: center;
 }
 
-.button:hover {
-  cursor: pointer;
-  background: linear-gradient(#ff46cc, #782cd3);
-}
-
 /* .btn {
     @include btn
 }
@@ -166,7 +161,12 @@ header {
   background-color: #EDEDED;
 }
 
-header a:active .button {
+a:hover .button {
+  cursor: pointer;
+  background: linear-gradient(#ff46cc, #782cd3);
+}
+
+a:active .button {
   background: linear-gradient(#ff46cc, #782cd3);
 }
 
