@@ -406,6 +406,13 @@ html {
   color: #278870;
 }
 
+li a:hover figure {
+  background-color: #99e2d0;
+}
+li .fa-heart:hover {
+  color: red;
+}
+
 #restaurantname {
   width: 100%;
   display: flex;

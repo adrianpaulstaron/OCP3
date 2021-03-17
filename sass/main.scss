@@ -38,6 +38,18 @@ html {
     @include darker-colour(color, false, $color-accent, white, 40%);
 }
 
+li {
+    a:hover {
+        figure {
+            @include darker-colour(background-color, false, $color-accent, white, 0%);
+            // box-shadow: 15px 15px 15px blue;
+        }
+    }
+    .fa-heart:hover {
+        color: red;
+    }
+}
+
 #restaurantname {
     width: 100%;
     display: flex;
