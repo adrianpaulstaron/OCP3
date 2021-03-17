@@ -20,6 +20,10 @@
 @import "./pages/about";
 @import "./pages/project";
 
+html {
+    scroll-behavior: smooth;
+}
+
 .arrowdiv {
     display: flex;
     flex-direction: row;

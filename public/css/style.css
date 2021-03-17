@@ -421,6 +421,10 @@ footer ul.footerlist > li > a:hover {
         grid-area: btn;
     }
 } */
+html {
+  scroll-behavior: smooth;
+}
+
 .arrowdiv {
   display: flex;
   flex-direction: row;
