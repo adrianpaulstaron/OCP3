@@ -24,6 +24,20 @@ html {
     scroll-behavior: smooth;
 }
 
+
+.newtag {
+    border-radius: 4px;
+    padding: 8px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 54%;
+    margin-top: 5%;
+    position: absolute;
+    background-color: $color-accent;
+    @include darker-colour(color, false, $color-accent, white, 40%);
+}
+
 #restaurantname {
     width: 100%;
     display: flex;

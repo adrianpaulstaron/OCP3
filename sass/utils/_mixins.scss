@@ -1,8 +1,8 @@
-@mixin darker-colour($attribute, $dual-colour:false, $colour:$colour-primary, $colour2:$colour-secondary){
+@mixin darker-colour($attribute, $dual-colour:false, $colour:$colour-primary, $colour2:$colour-secondary, $darken:10%){
     @if ($dual-colour){
         #{$attribute}: linear-gradient(darken($colour, 10%), darken($colour2, 10%));
     }@else{
-        #{$attribute}: darken($colour, 10%)
+        #{$attribute}: darken($colour, $darken)
     }
 }
 
