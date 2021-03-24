@@ -20,10 +20,6 @@
 @import "./pages/about";
 @import "./pages/project";
 
-html {
-    scroll-behavior: smooth;
-}
-
 
 .newtag {
     border-radius: 4px;
@@ -45,9 +41,34 @@ li {
             // box-shadow: 15px 15px 15px blue;
         }
     }
-    .fa-heart:hover {
+    .fullheart {
+        display: none;
+    }
+    // .heartsdiv{
+    //     background-color: blue;
+    //     width : 50px;
+    //     height: 50px;
+    // }
+    .heartsdiv:hover {
+        .emptyheart {
+            display: none;
+            color: red;
+        }
+        .fullheart {
+            display: block;
+            color: red;
+        }
+        .fullheart:hover {
+            transition: transform 300ms ease-in-out;
+            transform: scale(1.20);
+        }
+    }
+    .fullheart:hover {
+        display: block;
         color: red;
     }
+
+
 }
 
 #restaurantname {

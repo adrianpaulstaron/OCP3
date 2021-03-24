@@ -52,6 +52,7 @@
 html {
   margin: 0px;
   padding: 0px;
+  scroll-behavior: smooth;
 }
 
 .sectiontitle {
@@ -389,10 +390,6 @@ footer ul.footerlist > li > a:hover {
         grid-area: btn;
     }
 } */
-html {
-  scroll-behavior: smooth;
-}
-
 .newtag {
   border-radius: 4px;
   padding: 8px;
@@ -409,7 +406,23 @@ html {
 li a:hover figure {
   background-color: #99e2d0;
 }
-li .fa-heart:hover {
+li .fullheart {
+  display: none;
+}
+li .heartsdiv:hover .emptyheart {
+  display: none;
+  color: red;
+}
+li .heartsdiv:hover .fullheart {
+  display: block;
+  color: red;
+}
+li .heartsdiv:hover .fullheart:hover {
+  transition: transform 300ms ease-in-out;
+  transform: scale(1.2);
+}
+li .fullheart:hover {
+  display: block;
   color: red;
 }
 
