@@ -44,11 +44,6 @@ li {
     .fullheart {
         display: none;
     }
-    // .heartsdiv{
-    //     background-color: blue;
-    //     width : 50px;
-    //     height: 50px;
-    // }
     .heartsdiv:hover {
         .emptyheart {
             display: none;
@@ -129,7 +124,15 @@ a {
         justify-content: space-between;
         border-radius: $border-radius;
         background-color: $colour-background;
+        overflow: hidden;
+
         .menulistitem {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            overflow: hidden;
+        }
+        .dishcontainerdiv {
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -143,7 +146,6 @@ a {
                 border-top-left-radius: $border-radius;
                 border-top-right-radius: $border-radius;
                 height: 50%;
-                // background-color: yellowgreen;
             }
             .dishdescription {
                 padding-left: 15px;
@@ -153,17 +155,59 @@ a {
                 align-items: center;
                 border-bottom-left-radius: $border-radius;
                 height: 50%;
-                // background-color: yellow;
                 border-bottom-right-radius: $border-radius;
                 .dishprice {
                     display: flex;
                     flex-direction: row;
                     justify-content: flex-end;
                     align-items: center;
-                    padding-right: 15px;
                     border-bottom-right-radius: $border-radius;
                     height: 100%;
-                    // background-color: blue;
+                    font-weight: bold;
+                }
+            }
+        }
+        .checkmark {
+            overflow: hidden;
+            transition: width 0.2s ease-in-out;
+            width: 0px;
+            border-top-right-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+            background-color: $color-accent;
+            color: white;            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .fa-check{
+                transform: rotate(0deg);
+                font-size: 15px;
+                color: $color-accent;
+                border-radius: 50%;
+                padding: 5px;
+                background-color: $colour-background;
+            }
+        }
+
+        .menulistitem:hover {
+            cursor: pointer;
+            .checkmark {
+                transition: width 0.2s ease-in-out;
+                width: 55px;
+                margin-right: -1px;
+                border-top-right-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
+                background-color: $color-accent;
+                color: white;
+                text-align: center;
+                .fa-check {
+                    font-size: 15px;
+                    color: $color-accent;
+                    border-radius: 50%;
+                    padding: 5px;
+                    background-color: $colour-background;
+                    transform: rotate(360deg);
+                    transition: transform 250ms ease-in-out;
                 }
             }
         }

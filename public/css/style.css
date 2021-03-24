@@ -484,15 +484,22 @@ a {
   justify-content: space-between;
   border-radius: 20px;
   background-color: white;
+  overflow: hidden;
 }
 .menulist li .menulistitem {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
+}
+.menulist li .dishcontainerdiv {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.menulist li .menulistitem .dish {
+.menulist li .dishcontainerdiv .dish {
   padding-left: 15px;
   display: flex;
   flex-direction: row;
@@ -501,7 +508,7 @@ a {
   border-top-right-radius: 20px;
   height: 50%;
 }
-.menulist li .menulistitem .dishdescription {
+.menulist li .dishcontainerdiv .dishdescription {
   padding-left: 15px;
   display: flex;
   flex-direction: row;
@@ -511,14 +518,57 @@ a {
   height: 50%;
   border-bottom-right-radius: 20px;
 }
-.menulist li .menulistitem .dishdescription .dishprice {
+.menulist li .dishcontainerdiv .dishdescription .dishprice {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 15px;
   border-bottom-right-radius: 20px;
   height: 100%;
+  font-weight: bold;
+}
+.menulist li .checkmark {
+  overflow: hidden;
+  transition: width 0.2s ease-in-out;
+  width: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #99E2D0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menulist li .checkmark .fa-check {
+  transform: rotate(0deg);
+  font-size: 15px;
+  color: #99E2D0;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: white;
+}
+.menulist li .menulistitem:hover {
+  cursor: pointer;
+}
+.menulist li .menulistitem:hover .checkmark {
+  transition: width 0.2s ease-in-out;
+  width: 55px;
+  margin-right: -1px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #99E2D0;
+  color: white;
+  text-align: center;
+}
+.menulist li .menulistitem:hover .checkmark .fa-check {
+  font-size: 15px;
+  color: #99E2D0;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: white;
+  transform: rotate(360deg);
+  transition: transform 250ms ease-in-out;
 }
 
 /*================== fonctionnement ==================*/
