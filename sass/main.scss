@@ -138,6 +138,8 @@ a {
             width: 100%;
             padding-top: 5px;
             padding-bottom: 5px;
+            transition: width 0.2s ease-in-out;
+
             .dish {
                 padding-left: 15px;
                 display: flex;
@@ -154,13 +156,20 @@ a {
                 justify-content: space-between;
                 align-items: center;
                 border-bottom-left-radius: $border-radius;
-                height: 50%;
                 border-bottom-right-radius: $border-radius;
+                height: 50%;
+                .dishtext {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    padding-right: 10px;
+                }
+
                 .dishprice {
                     display: flex;
                     flex-direction: row;
                     justify-content: flex-end;
-                    align-items: center;
+                    align-items: bottom;
                     border-bottom-right-radius: $border-radius;
                     height: 100%;
                     font-weight: bold;
@@ -209,6 +218,10 @@ a {
                     transform: rotate(360deg);
                     transition: transform 250ms ease-in-out;
                 }
+            }
+            .dishcontainerdiv {
+                transition: width 0.2s ease-in-out;
+                width: 260px;
             }
         }
     }

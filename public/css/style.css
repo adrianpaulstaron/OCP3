@@ -498,6 +498,7 @@ a {
   width: 100%;
   padding-top: 5px;
   padding-bottom: 5px;
+  transition: width 0.2s ease-in-out;
 }
 .menulist li .dishcontainerdiv .dish {
   padding-left: 15px;
@@ -515,14 +516,20 @@ a {
   justify-content: space-between;
   align-items: center;
   border-bottom-left-radius: 20px;
-  height: 50%;
   border-bottom-right-radius: 20px;
+  height: 50%;
+}
+.menulist li .dishcontainerdiv .dishdescription .dishtext {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 10px;
 }
 .menulist li .dishcontainerdiv .dishdescription .dishprice {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: center;
+  align-items: bottom;
   border-bottom-right-radius: 20px;
   height: 100%;
   font-weight: bold;
@@ -569,6 +576,10 @@ a {
   background-color: white;
   transform: rotate(360deg);
   transition: transform 250ms ease-in-out;
+}
+.menulist li .menulistitem:hover .dishcontainerdiv {
+  transition: width 0.2s ease-in-out;
+  width: 260px;
 }
 
 /*================== fonctionnement ==================*/
