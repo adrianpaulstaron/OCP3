@@ -50,11 +50,11 @@ li {
     .heartsdiv:hover {
         .emptyheart {
             display: none;
-            color: red;
         }
         .fullheart {
             display: block;
-            color: red;
+            color: linear-gradient($colour-primary, $colour-secondary);
+            ;
         }
         .fullheart:hover {
             transition: transform 300ms ease-in-out;
@@ -63,7 +63,9 @@ li {
     }
     .fullheart:hover {
         display: block;
-        color: red;
+        background: -webkit-linear-gradient($colour-secondary, $colour-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
 

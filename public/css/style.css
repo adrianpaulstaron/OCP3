@@ -414,11 +414,10 @@ li .heartsdiv {
 }
 li .heartsdiv:hover .emptyheart {
   display: none;
-  color: red;
 }
 li .heartsdiv:hover .fullheart {
   display: block;
-  color: red;
+  color: linear-gradient(#FF79DA, #9356DC);
 }
 li .heartsdiv:hover .fullheart:hover {
   transition: transform 300ms ease-in-out;
@@ -426,7 +425,9 @@ li .heartsdiv:hover .fullheart:hover {
 }
 li .fullheart:hover {
   display: block;
-  color: red;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #restaurantname {
