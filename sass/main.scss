@@ -19,7 +19,7 @@
  */
 @import "./pages/about";
 @import "./pages/project";
-
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 .newtag {
     border-radius: 4px;
@@ -57,18 +57,14 @@ li {
             ;
         }
         .fullheart:hover {
+            display: block;
+            background: -webkit-linear-gradient($colour-secondary, $colour-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             transition: transform 300ms ease-in-out;
             transform: scale(1.20);
         }
     }
-    .fullheart:hover {
-        display: block;
-        background: -webkit-linear-gradient($colour-secondary, $colour-primary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-
 }
 
 #restaurantname {
