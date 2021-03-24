@@ -409,6 +409,9 @@ li a:hover figure {
 li .fullheart {
   display: none;
 }
+li .heartsdiv {
+  margin-bottom: 10px;
+}
 li .heartsdiv:hover .emptyheart {
   display: none;
   color: red;
