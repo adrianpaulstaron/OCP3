@@ -173,6 +173,7 @@ a {
                     border-bottom-right-radius: $border-radius;
                     height: 100%;
                     font-weight: bold;
+                    padding:10px;
                 }
             }
         }
@@ -187,13 +188,18 @@ a {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            // align-items: center;
             .fa-check{
                 transform: rotate(0deg);
                 font-size: 15px;
                 color: $color-accent;
                 border-radius: 50%;
-                padding: 5px;
+                margin-left: 12px;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 background-color: $colour-background;
             }
         }
@@ -208,12 +214,10 @@ a {
                 border-bottom-right-radius: $border-radius;
                 background-color: $color-accent;
                 color: white;
-                text-align: center;
                 .fa-check {
                     font-size: 15px;
                     color: $color-accent;
                     border-radius: 50%;
-                    padding: 5px;
                     background-color: $colour-background;
                     transform: rotate(360deg);
                     transition: transform 250ms ease-in-out;

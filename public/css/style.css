@@ -533,6 +533,7 @@ a {
   border-bottom-right-radius: 20px;
   height: 100%;
   font-weight: bold;
+  padding: 10px;
 }
 .menulist li .checkmark {
   overflow: hidden;
@@ -545,14 +546,18 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 .menulist li .checkmark .fa-check {
   transform: rotate(0deg);
   font-size: 15px;
   color: #99E2D0;
   border-radius: 50%;
-  padding: 5px;
+  margin-left: 12px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
 }
 .menulist li .menulistitem:hover {
@@ -566,13 +571,11 @@ a {
   border-bottom-right-radius: 20px;
   background-color: #99E2D0;
   color: white;
-  text-align: center;
 }
 .menulist li .menulistitem:hover .checkmark .fa-check {
   font-size: 15px;
   color: #99E2D0;
   border-radius: 50%;
-  padding: 5px;
   background-color: white;
   transform: rotate(360deg);
   transition: transform 250ms ease-in-out;
