@@ -42,28 +42,61 @@ li {
         }
     }
     .fullheart {
-        display: none;
+        position: absolute;
+        font-size: 0.5px;
+        color: transparent;
     }
     .heartsdiv {
         margin-bottom: 10px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .emptyheart {
+        color: -webkit-linear-gradient($colour-secondary, $colour-primary);
+        color: $colour-secondary;
+        position: absolute;
+
     }
     .heartsdiv:hover {
         .emptyheart {
-            display: none;
+            // display: none;
+            // background: -webkit-linear-gradient($colour-secondary, $colour-primary);
+            // scale: 0.1;
+            // transition: transform 300ms ease-in-out;
+            // transform: scale(10);
+            // transition-property: color;
+            // transition: 0.2s ease-in-out;
+            // color: transparent;
         }
         .fullheart {
-            display: block;
-            color: linear-gradient($colour-primary, $colour-secondary);
-            ;
-        }
-        .fullheart:hover {
-            display: block;
+            // display: block;
+            color: -webkit-linear-gradient($colour-secondary, $colour-primary);
             background: -webkit-linear-gradient($colour-secondary, $colour-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            scale: 0.1;
             transition: transform 300ms ease-in-out;
-            transform: scale(1.20);
+            transform: scale(10);
+
         }
+        // .fullheart {
+        //     display: none;
+        //     color: linear-gradient($colour-primary, $colour-secondary);
+        //     font-size: 5px;
+        // }
+        // .fullheart {
+        //     display: none;
+        //     background: -webkit-linear-gradient($colour-secondary, $colour-primary);
+        //     -webkit-background-clip: text;
+        //     -webkit-text-fill-color: transparent;
+        //     scale: 0.1;
+        //     transition-delay: 250ms;
+        //     transition: transform 300ms ease-in-out;
+        //     transform: scale(10);
+        // }
     }
 }
 
@@ -207,9 +240,12 @@ a {
 
         .menulistitem:hover {
             cursor: pointer;
+            .dishcontainerdiv {
+                width: 80%;
+            }
             .checkmark {
                 transition: width 0.2s ease-in-out;
-                width: 55px;
+                width: 20%;
                 margin-right: -1px;
                 border-top-right-radius: $border-radius;
                 border-bottom-right-radius: $border-radius;
@@ -226,7 +262,6 @@ a {
             }
             .dishcontainerdiv {
                 transition: width 0.2s ease-in-out;
-                width: 260px;
             }
         }
     }

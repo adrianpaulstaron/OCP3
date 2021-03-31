@@ -419,25 +419,31 @@ li a:hover figure {
   background-color: #99e2d0;
 }
 li .fullheart {
-  display: none;
+  position: absolute;
+  font-size: 0.5px;
+  color: transparent;
 }
 li .heartsdiv {
   margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-li .heartsdiv:hover .emptyheart {
-  display: none;
+li .emptyheart {
+  color: -webkit-linear-gradient(#9356DC, #FF79DA);
+  color: #9356DC;
+  position: absolute;
 }
 li .heartsdiv:hover .fullheart {
-  display: block;
-  color: linear-gradient(#FF79DA, #9356DC);
-}
-li .heartsdiv:hover .fullheart:hover {
-  display: block;
+  color: -webkit-linear-gradient(#9356DC, #FF79DA);
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  scale: 0.1;
   transition: transform 300ms ease-in-out;
-  transform: scale(1.2);
+  transform: scale(10);
 }
 
 #restaurantname {
@@ -577,9 +583,12 @@ a {
 .menulist li .menulistitem:hover {
   cursor: pointer;
 }
+.menulist li .menulistitem:hover .dishcontainerdiv {
+  width: 80%;
+}
 .menulist li .menulistitem:hover .checkmark {
   transition: width 0.2s ease-in-out;
-  width: 55px;
+  width: 20%;
   margin-right: -1px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -596,7 +605,6 @@ a {
 }
 .menulist li .menulistitem:hover .dishcontainerdiv {
   transition: width 0.2s ease-in-out;
-  width: 260px;
 }
 
 /*================== fonctionnement ==================*/
