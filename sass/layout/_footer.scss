@@ -30,3 +30,11 @@ footer {
         @include darker-colour(color, false, white);
     }
 }
+
+// @media all and (min-width:768px){
+//     .footerlist {
+//         display: flex;
+//         align-items: space-around;
+//         justify-content: space-around;
+//     }
+// }

@@ -16,7 +16,7 @@ header {
     }
 
 #logodiv {
-    box-shadow: 0px 4px 4px $colour-box-shadow;
+    box-shadow: 0 4px 2px -2px $colour-box-shadow;
     background-color: $colour-background;
     display: flex;
     flex-direction: row;

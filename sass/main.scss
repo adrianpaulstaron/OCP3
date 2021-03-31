@@ -17,6 +17,32 @@
 @import "./pages/about";
 @import "./pages/project";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+
+@media all and (min-width: 973px) {
+    body {
+        max-width: 972px;
+        margin: auto;
+    }
+}
+
+// @media all and (min-width: 769px) {
+//     .arrowdiv {
+//         display: none;
+//     }
+// }
+
+// @media all and (max-width: 768px) {
+//     .arrowdiv {
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: flex-start;
+//     }
+    
+// }
+
+
+
 h2 {
     padding-left: 10px;
 }
@@ -113,13 +139,19 @@ li {
     }
 }    
 
+
+
 .arrowdiv {
+    position: absolute;
+    font-size: 20px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 85%;
-    position: absolute;
-    font-size: 20px;
+    margin-right: 275px;
+    
+    // position: relative;
+    // top: 0px; 
+    // left: -470px;
 }
 
 .text {
@@ -150,10 +182,20 @@ a {
     }
 }
 
+#filling-empty-space-childs {
+    width:205px; /*the width of the images in this example*/
+    height:0; /*Important! for the divs to collapse should they fall in a new row*/
+    background-color: transparent;
+}
+
 .menulist {
     padding: 0px; 
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     li {
+        margin-right: 10px;
         box-shadow: 5px 5px 10px $colour-box-shadow;
         margin-bottom: 25px;
         height: 70px;
@@ -163,7 +205,9 @@ a {
         border-radius: $border-radius;
         background-color: $colour-background;
         overflow: hidden;
-
+        width: 100%;
+        min-width: 280px;
+        max-width: 300px;
         .menulistitem {
             display: flex;
             flex-direction: row;
