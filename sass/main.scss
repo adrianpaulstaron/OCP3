@@ -183,6 +183,11 @@ a {
                 border-top-left-radius: $border-radius;
                 border-top-right-radius: $border-radius;
                 height: 50%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .dishseparator {
+                width: 20px;
             }
             .dishdescription {
                 padding-left: 15px;

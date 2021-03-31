@@ -94,11 +94,12 @@ body {
 } */
 .dish {
   font-weight: normal;
+  font-size: 14px;
 }
 
 .dishdescription {
   font-weight: lighter;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .dishprice {
@@ -529,6 +530,11 @@ a {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   height: 50%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menulist li .dishcontainerdiv .dishseparator {
+  width: 20px;
 }
 .menulist li .dishcontainerdiv .dishdescription {
   padding-left: 15px;
