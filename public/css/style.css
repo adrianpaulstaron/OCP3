@@ -99,7 +99,7 @@ body {
 
 .dishdescription {
   font-weight: lighter;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .dishprice {
@@ -312,9 +312,6 @@ footer ul.footerlist > li > a:hover {
   color: #e6e6e6;
 }
 
-/* 
-@import "./pages/work";
- */
 /* .about {
     width: 100%;
     display: grid;
@@ -403,27 +400,33 @@ footer ul.footerlist > li > a:hover {
         grid-area: btn;
     }
 } */
+h2 {
+  padding-left: 10px;
+}
+
 .newtag {
+  margin-top: -32px;
+  position: relative;
+  width: 70px;
+  text-align: center;
+  top: 50px;
+  left: 205px;
   border-radius: 4px;
   padding: 8px;
   padding-bottom: 7px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: 54%;
-  margin-top: 5%;
-  position: absolute;
   background-color: #99E2D0;
   color: #278870;
 }
 
-li a:hover figure {
-  background-color: #99e2d0;
-}
-li .fullheart {
+.fullheart {
   margin-top: 1px;
   position: absolute;
   font-size: 0.5px;
   color: transparent;
+}
+
+li a:hover figure {
+  background-color: #99e2d0;
 }
 li .heartsdiv {
   margin-bottom: 10px;
@@ -433,12 +436,8 @@ li .heartsdiv {
   align-items: center;
   justify-content: center;
 }
-li .emptyheart {
-  color: -webkit-linear-gradient(#9356DC, #FF79DA);
-  color: #9356DC;
-  position: absolute;
-}
 li .heartsdiv:hover .fullheart {
+  margin-top: 2px;
   color: -webkit-linear-gradient(#9356DC, #FF79DA);
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
@@ -452,6 +451,7 @@ li .heartsdiv:hover .fullheart {
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 #restaurantname .fa-heart {
   font-size: 20px;
@@ -616,7 +616,7 @@ a {
 
 /*================== fonctionnement ==================*/
 #operation {
-  padding: 30px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -667,7 +667,7 @@ a {
 
 /*================== restaurants ==================*/
 .mainsection {
-  padding: 30px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
