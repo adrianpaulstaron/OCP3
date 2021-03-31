@@ -42,6 +42,7 @@ li {
         }
     }
     .fullheart {
+        margin-top: 1px;
         position: absolute;
         font-size: 0.5px;
         color: transparent;
@@ -79,7 +80,7 @@ li {
             -webkit-text-fill-color: transparent;
             scale: 0.1;
             transition: transform 300ms ease-in-out;
-            transform: scale(10);
+            transform: scale(8.3);
 
         }
         // .fullheart {
