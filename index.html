@@ -8,196 +8,201 @@
 
     <title>ohmyfood</title>
     </head>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
     <body>
-        <header>
-            <!-- le logo -->
-            <div id="logodiv">
-                <img id="logo" src="utilities/images/logo/ohmyfood@2x.svg" alt="ohmyfood">
-            </div>
-            <div id="location" class="text">
-                <i class="fas fa-map-marker-alt mapmarker"></i>
-                Paris, Belleville
-            </div>
-                <div id="explore">
-                    <h2 class="text">Réservez le menu qui vous convient</h2>
-                    <div class="text">Découvrez des restaurants d'exception, sélectionnés par nos soins</div>
-                    <a href=#restaurantslist>
-                        <div class="button text">
-                        Explorer nos restaurants
-                        </div>    
-                    </a>
-                </div>    
-            
-
-        </header>
-        <section id="operation">
-                <div class="sectiontitle">
-                    <h2 class="text">Fonctionnement</h2>
+        <main class="page-main-index">
+            <header>
+                <!-- le logo -->
+                <div id="logodiv">
+                    <img id="logo" src="utilities/images/logo/ohmyfood@2x.svg" alt="ohmyfood">
                 </div>
-                <ul class="text operationlist">
+                <div id="location" class="text">
+                    <i class="fas fa-map-marker-alt mapmarker"></i>
+                    Paris, Belleville
+                </div>
+                    <div id="explore">
+                        <h2 class="text">Réservez le menu qui vous convient</h2>
+                        <div class="text">Découvrez des restaurants d'exception, sélectionnés par nos soins</div>
+                        <a href=#restaurantslist>
+                            <div class="button text">
+                            Explorer nos restaurants
+                            </div>    
+                        </a>
+                    </div>    
+                
+
+            </header>
+            <section id="operation">
+                    <div class="sectiontitle">
+                        <h2 class="text">Fonctionnement</h2>
+                    </div>
+                    <ul class="text operationlist">
+                        <li>
+                            <div class="operationbutton__container">
+                                <div class="operationbutton__number">1</div>
+                            </div>
+                            <div class="operationbutton__container">
+                                <i class="fas fa-mobile-alt operationbutton__icon"></i>
+                            </div>
+                            <div class="operationbutton__text">
+                                Choisissez un restaurant
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="operationbutton__container">
+                                <div class="operationbutton__number">2</div>
+                            </div>
+                            <div class="operationbutton__container">
+                                <i class="fas fa-list-ul operationbutton__icon"></i>
+                            </div>
+                            <div class="operationbutton__text">
+                                Composez votre menu
+                            </div>
+                        </li>    
+                        <li>
+                            <div class="operationbutton__container">
+                                <div class="operationbutton__number">3</div>
+                            </div>
+                            <div class="operationbutton__container">
+                                <i class="fas fa-store operationbutton__icon"></i>
+                            </div>
+                            <div class="operationbutton__text">
+                                Dégustez au restaurant
+                            </div>
+                        </li> 
+                    </ul>   
+                </section>
+            <section class="mainsection" id="restaurantslist">
+                <div class="sectiontitle">
+                    <h2 class="text">Restaurants</h2>
+                </div>
+
+                <ul class="text restaurantlist">
+
                     <li>
-                        <div class="operationbutton__container">
-                            <div class="operationbutton__number">1</div>
-                        </div>
-                        <div class="operationbutton__container">
-                            <i class="fas fa-mobile-alt operationbutton__icon"></i>
-                        </div>
-                        <div class="operationbutton__text">
-                            Choisissez un restaurant
-                        </div>
-                    </li>
+                        <div class="newtag">Nouveau</div>
 
-                    <li>
-                        <div class="operationbutton__container">
-                            <div class="operationbutton__number">2</div>
-                        </div>
-                        <div class="operationbutton__container">
-                            <i class="fas fa-list-ul operationbutton__icon"></i>
-                        </div>
-                        <div class="operationbutton__text">
-                            Composez votre menu
-                        </div>
-                    </li>    
-                    <li>
-                        <div class="operationbutton__container">
-                            <div class="operationbutton__number">3</div>
-                        </div>
-                        <div class="operationbutton__container">
-                            <i class="fas fa-store operationbutton__icon"></i>
-                        </div>
-                        <div class="operationbutton__text">
-                            Dégustez au restaurant
-                        </div>
-                    </li> 
-                </ul>   
-            </section>
-        <section class="mainsection" id="restaurantslist">
-            <div class="sectiontitle">
-                <h2 class="text">Restaurants</h2>
-            </div>
-
-            <ul class="text restaurantlist">
-
-                <li>
-                    <div class="newtag">Nouveau</div>
-
-                    <figure>
-
-                        <img class="restaurantpicture text" src="utilities/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant picture">
-                        <figcaption>
-                            <div>
-                                <div class="text">
-                                    <b>La Palette du Goût</b>
-                                </div>
-                                <div class="text">
-                                    Ménilmontant
-                                </div>    
-                            </div>
-                            <div class="heartsdiv">
-                                    <i class="far fa-heart emptyheart"></i>
-                                    <i class="fas fa-heart fullheart"></i>
-                            </div>
-
-                        </figcaption>
-                    </figure>
-                </li> 
-
-                <li>
-                    <div class="newtag">Nouveau</div>
-
-                    <figure>
-
-                        <img class="restaurantpicture text" src="utilities/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant picture">
-                        <figcaption>
-                            <div>
-                                <div class="text">
-                                    <b>La Note Enchantée</b>
-                                </div>
-                                <div class="text">
-                                    Charonne
-                                </div>    
-                            </div>
-                            <div class="heartsdiv">
-                                <i class="far fa-heart emptyheart"></i>
-                                <i class="fas fa-heart fullheart"></i>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li> 
-
-                <li>
-                    <a href="alafrancaise.html">
                         <figure>
-                            <img class="restaurantpicture text" src="utilities/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant picture">
+
+                            <img class="restaurantpicture text" src="utilities/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant picture">
                             <figcaption>
                                 <div>
                                     <div class="text">
-                                        <b>À la française</b>
+                                        <b>La Palette du Goût</b>
                                     </div>
                                     <div class="text">
-                                        Cité Rouge
+                                        Ménilmontant
+                                    </div>    
+                                </div>
+                                <div class="heartsdiv">
+                                        <i class="far fa-heart emptyheart"></i>
+                                        <i class="fas fa-heart fullheart"></i>
+                                </div>
+
+                            </figcaption>
+                        </figure>
+                    </li> 
+
+                    <li>
+                        <div class="newtag">Nouveau</div>
+
+                        <figure>
+
+                            <img class="restaurantpicture text" src="utilities/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant picture">
+                            <figcaption>
+                                <div>
+                                    <div class="text">
+                                        <b>La Note Enchantée</b>
+                                    </div>
+                                    <div class="text">
+                                        Charonne
                                     </div>    
                                 </div>
                                 <div class="heartsdiv">
                                     <i class="far fa-heart emptyheart"></i>
                                     <i class="fas fa-heart fullheart"></i>
                                 </div>
-    
-                                </figcaption>
+                            </figcaption>
                         </figure>
-                    </a>
-                </li> 
+                    </li> 
+
+                    <li>
+                        <a href="alafrancaise.html">
+                            <figure>
+                                <img class="restaurantpicture text" src="utilities/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant picture">
+                                <figcaption>
+                                    <div>
+                                        <div class="text">
+                                            <b>À la française</b>
+                                        </div>
+                                        <div class="text">
+                                            Cité Rouge
+                                        </div>    
+                                    </div>
+                                    <div class="heartsdiv">
+                                        <i class="far fa-heart emptyheart"></i>
+                                        <i class="fas fa-heart fullheart"></i>
+                                    </div>
+        
+                                    </figcaption>
+                            </figure>
+                        </a>
+                    </li> 
 
 
 
-                <li>
-                    <figure>
-                        <img class="restaurantpicture text" src="utilities/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restaurant picture">
-                        <figcaption>
-                            <div>
-                                <div class="text">
-                                    <b>Le Délice des Sens</b>
+                    <li>
+                        <figure>
+                            <img class="restaurantpicture text" src="utilities/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restaurant picture">
+                            <figcaption>
+                                <div>
+                                    <div class="text">
+                                        <b>Le Délice des Sens</b>
+                                    </div>
+                                    <div class="text">
+                                        Folie-Méricourt
+                                    </div>    
                                 </div>
-                                <div class="text">
-                                    Folie-Méricourt
-                                </div>    
-                            </div>
-                            <div class="heartsdiv">
-                                <i class="far fa-heart emptyheart"></i>
-                                <i class="fas fa-heart fullheart"></i>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li> 
+                                <div class="heartsdiv">
+                                    <i class="far fa-heart emptyheart"></i>
+                                    <i class="fas fa-heart fullheart"></i>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li> 
 
 
 
-            </ul>
+                </ul>
 
-        </section>
+            </section>
 
-        <footer class="text">
-            <img id="logolight" src="utilities/images/logo/ohmyfood@2x-white.svg" alt="ohmyfood">
+            <footer class="text">
+                <img id="logolight" src="utilities/images/logo/ohmyfood@2x-white.svg" alt="ohmyfood">
 
-            <ul class="footerlist">
-                <li>
-                    <a href="#">
-                        <i class="fas fa-utensils footericon"></i>
-                        Proposer un restaurant
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-handshake footericon handshake"></i>
-                        Devenir partenaire</a>
-                </li>
-                <li>
-                    <a href="#">Mentions légales</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </footer>
+                <ul class="footerlist">
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-utensils footericon"></i>
+                            Proposer un restaurant
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-handshake footericon handshake"></i>
+                            Devenir partenaire</a>
+                    </li>
+                    <li>
+                        <a href="#">Mentions légales</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </footer>
+        </main>
     </body>
 </html>
