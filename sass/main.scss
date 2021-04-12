@@ -46,17 +46,17 @@ li {
             // box-shadow: 15px 15px 15px blue;
         }
     }
-    .heartsdiv {
-        margin-bottom: 10px;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    
     
 }
-
+.heartsdiv {
+    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .heartsdiv:hover {
     .fullheart {
         // font-size: 21px;

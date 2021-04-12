@@ -373,8 +373,17 @@ footer ul.footerlist > li > a:hover {
   color: #278870;
 }
 
+.heartsdivrestaurant {
+  margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .heartsdivrestaurant:hover .fullheart {
-  margin-top: 1px;
+  margin-top: -19px;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -390,7 +399,7 @@ footer ul.footerlist > li > a:hover {
     font-size: 0px;
   }
   to {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 
@@ -692,7 +701,8 @@ figure .fa-heart {
 li a:hover figure {
   background-color: lightgray;
 }
-li .heartsdiv {
+
+.heartsdiv {
   margin-bottom: 10px;
   width: 40px;
   height: 40px;

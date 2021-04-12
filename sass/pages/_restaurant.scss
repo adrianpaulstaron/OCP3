@@ -11,11 +11,20 @@
     background-color: $color-accent;
     @include darker-colour(color, false, $color-accent, white, 40%);
 }
+
+.heartsdivrestaurant {
+    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .heartsdivrestaurant:hover {
     .fullheart {
         // font-size: 21px;
         // display: block;
-        margin-top: 1px;
+        margin-top: -19px;
         // color: -webkit-linear-gradient($colour-secondary, $colour-primary);
         background: -webkit-linear-gradient($colour-secondary, $colour-primary);
         -webkit-background-clip: text;
@@ -34,7 +43,7 @@
                 font-size: 0px;
             }
             to {
-                font-size: 18px;
+                font-size: 17px;
             }
         }
 }
