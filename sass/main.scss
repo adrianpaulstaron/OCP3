@@ -11,11 +11,11 @@
 @import "./layout/header";
 @import "./layout/nav";
 @import "./layout/container";
-@import "./layout/form";
 @import "./layout/footer";
 
-@import "./pages/about";
-@import "./pages/project";
+@import "./pages/restaurant";
+@import "./pages/index.scss";
+
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 
@@ -26,43 +26,12 @@
     }
 }
 
-// @media all and (min-width: 769px) {
-//     .arrowdiv {
-//         display: none;
-//     }
-// }
-
-// @media all and (max-width: 768px) {
-//     .arrowdiv {
-//         display: flex;
-//         flex-direction: row;
-//         justify-content: flex-start;
-//     }
-    
-// }
-
-
-
-h2 {
-    padding-left: 10px;
+@media all and (max-width: 1080px){
+    body{
+        padding: 0px;
+    }
 }
-.newtag {
-    margin-top: -32px;
-    position: relative;
-    width: 70px;
-    text-align: center;
-    top: 50px; 
-    left: 205px;
-    border-radius: 4px;
-    padding: 8px;
-    padding-bottom: 7px;
-    // padding-left: 10px;
-    // padding-right: 10px;
-    // margin-left: 54%;
-    // margin-top: 5%;
-    background-color: $color-accent;
-    @include darker-colour(color, false, $color-accent, white, 40%);
-}
+
 .fullheart {
         margin-top: 1px;
         position: absolute;
@@ -85,73 +54,35 @@ li {
         align-items: center;
         justify-content: center;
     }
-    .heartsdiv:hover {
-        .fullheart {
-            // display: block;
-            margin-top: 2px;
-            color: -webkit-linear-gradient($colour-secondary, $colour-primary);
-            background: -webkit-linear-gradient($colour-secondary, $colour-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            scale: 0.1;
-            transition: transform 300ms ease-in-out;
-            transform: scale(8.3);
-        }
-    }
-}
-// .restaurantheart {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-// }
-// .restaurantheart{
-//     .heartsdiv {
-//         .emptyheart {
-//             color: $colour-secondary;
-//             position: absolute;
-//         }
-//     }
-
-//     .heartsdiv:hover {
-//         .fullheart {
-//             // display: block;
-//             color: -webkit-linear-gradient($colour-secondary, $colour-primary);
-//             background: -webkit-linear-gradient($colour-secondary, $colour-primary);
-//             -webkit-background-clip: text;
-//             -webkit-text-fill-color: transparent;
-//             scale: 0.1;
-//             transition: transform 300ms ease-in-out;
-//             transform: scale(8.3);}
-//         .emptyheart {
-//             color: $colour-secondary
-//         }
-//     }
-// }
-
-
-#restaurantname {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    .fa-heart {
-        font-size: 20px;
-    }
-}    
-
-
-
-.arrowdiv {
-    position: absolute;
-    font-size: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-right: 275px;
     
-    // position: relative;
-    // top: 0px; 
-    // left: -470px;
+}
+
+.heartsdiv:hover {
+    .fullheart {
+        // font-size: 21px;
+        // display: block;
+        margin-top: 1px;
+        // color: -webkit-linear-gradient($colour-secondary, $colour-primary);
+        background: -webkit-linear-gradient($colour-secondary, $colour-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        // scale: 0.1;
+        color: transparent;
+        transition: transform 300ms ease-in-out;
+        // transform: scale(8.3);
+
+        animation-duration: 0.4s;
+        animation-name: fill;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fill {
+        from {
+                font-size: 0px;
+            }
+            to {
+                font-size: 21px;
+            }
+        }
 }
 
 .text {
@@ -163,10 +94,8 @@ a {
     color: black;
 }
 
-
 .menusection{
     margin-top: -55px;
-    background-color: yellowgreen;
     border-top-left-radius: 45px;
     border-top-right-radius: 45px;
 }
@@ -182,250 +111,7 @@ a {
     }
 }
 
-#filling-empty-space-childs {
-    width:205px;
-    height:0; 
-    background-color: transparent;
-}
-
-.menulist {
-    padding: 0px; 
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    li {
-        margin-right: 10px;
-        box-shadow: 5px 5px 10px $colour-box-shadow;
-        margin-bottom: 25px;
-        height: 70px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        border-radius: $border-radius;
-        background-color: $colour-background;
-        overflow: hidden;
-        width: 100%;
-        min-width: 280px;
-        max-width: 300px;
-        .menulistitem {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            overflow: hidden;
-        }
-        .dishcontainerdiv {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            transition: width 0.2s ease-in-out;
-
-            .dish {
-                padding-left: 15px;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                border-top-left-radius: $border-radius;
-                border-top-right-radius: $border-radius;
-                height: 50%;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-            }
-            .dishseparator {
-                width: 20px;
-            }
-            .dishdescription {
-                padding-left: 15px;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                border-bottom-left-radius: $border-radius;
-                border-bottom-right-radius: $border-radius;
-                height: 50%;
-                .dishtext {
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    padding-right: 10px;
-                }
-
-                .dishprice {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-end;
-                    align-items: bottom;
-                    border-bottom-right-radius: $border-radius;
-                    height: 100%;
-                    font-weight: bold;
-                    padding:10px;
-                }
-            }
-        }
-        .checkmark {
-            overflow: hidden;
-            transition: width 0.2s ease-in-out;
-            width: 0px;
-            border-top-right-radius: $border-radius;
-            border-bottom-right-radius: $border-radius;
-            background-color: $color-accent;
-            color: white;            
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            // align-items: center;
-            .fa-check{
-                transform: rotate(0deg);
-                font-size: 15px;
-                color: $color-accent;
-                border-radius: 50%;
-                margin-left: 12px;
-                width: 30px;
-                height: 30px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: $colour-background;
-            }
-        }
-
-        .menulistitem:hover {
-            cursor: pointer;
-            .dishcontainerdiv {
-                width: 80%;
-            }
-            .checkmark {
-                transition: width 0.2s ease-in-out;
-                width: 20%;
-                margin-right: -1px;
-                border-top-right-radius: $border-radius;
-                border-bottom-right-radius: $border-radius;
-                background-color: $color-accent;
-                color: white;
-                .fa-check {
-                    font-size: 15px;
-                    color: $color-accent;
-                    border-radius: 50%;
-                    background-color: $colour-background;
-                    transform: rotate(360deg);
-                    transition: transform 250ms ease-in-out;
-                }
-            }
-            .dishcontainerdiv {
-                transition: width 0.2s ease-in-out;
-            }
-        }
-    }
-}
-
-/*================== fonctionnement ==================*/
-
-#operation {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-// h2 {
-//     display: flex;
-//     flex-direction: row;
-// }
-
-
-    ul.operationlist>li {
-        padding: 20px;
-        margin-left: -22px;
-        width: 250px;
-        border-radius: $border-radius;
-        background-color: $colour-background-alt;
-        box-shadow: 5px 5px 10px $colour-box-shadow;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 20px;   
-
-        .operationbutton__container {
-            width: 0px;
-            /* cette div existe simple pour que sa div fille, operationnumber (ou la div de l'icône fontawesome), ne pousse pas les autres éléments du bouton; elle a donc une width de 0px */
-
-            .operationbutton__number {
-                margin-left: -38px;
-                width: 34px;
-                height: 31px;
-                color: white;
-                background-color: $colour-secondary;
-                padding-top: 2px;
-                border-radius: 50%;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .operationbutton__icon {
-                padding-left: 20px;
-                padding-right: 20px;
-                margin-left: -12px;
-                width: 30px;
-                /* sur la maquette, la location est centrée, on offset donc le map marker vers la gauche d'autant de pixels qu'il fait de large (26px + 2x10px de padding) pour qu'il n'offset pas la location vers la droite */
-            }
-        }
-        .operationbutton__text {
-            padding-left: 40px;
-        }
-    }
-    ul.operationlist>li:hover {
-        cursor: pointer;
-        @include lighter-background();
-    }
-}
-
-/*================== restaurants ==================*/
-
-.mainsection {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $colour-background-alt;
-    // margin-left: -8px;
-    // margin-right: -8px;
-    .restaurantlist {
-        width: 309px;
-        background-color: $colour-background-alt;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0px;
-        li {
-            padding-bottom: 25px;
-        }
-        figure {
-            object-fit: cover;
-            box-shadow: 5px 5px 10px $colour-box-shadow;
-            border-radius: $border-radius;
-            margin: 0px;
-            .restaurantpicture {
-                width: 309px;
-                height: 200px;
-                object-fit: cover;
-                border-top-left-radius: $border-radius;
-                border-top-right-radius: $border-radius;
-            }
-            figcaption {
-                padding: 15px;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                .text {
-                    padding: 3px;
-                }
-            }
-            .fa-heart {
-                font-size: 25px;
-                padding-top: 9px;
-            }
-        }
-    }
+.filling-empty-space-childs {
+    width:80%;
+    height:0 !important; 
 }

@@ -1,3 +1,4 @@
+
 html {
     margin: 0px;
     padding: 0px;
@@ -8,9 +9,10 @@ html {
     width: 312px;
 }
 
-body{
+body {
     margin: 0px;
     padding: 0px;
+    padding-left: 10px;
 }
 
 h2 {
@@ -67,32 +69,31 @@ li {
 }
 
 @-webkit-keyframes spin {
-    0%  { 
-        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg);  /* IE 9 */
-        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    0% { 
+        -webkit-transform: rotate(0deg);        /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);            /* IE 9 */
+        transform: rotate(0deg);                /* Firefox 16+, IE 10+, Opera */
     }
     100% { 
-        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg);  /* IE 9 */
-        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: rotate(360deg);      /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);          /* IE 9 */
+        transform: rotate(360deg);              /* Firefox 16+, IE 10+, Opera */
     }
 }
 @keyframes spin {
-    0%  { 
-        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg);  /* IE 9 */
-        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    0% { 
+        -webkit-transform: rotate(0deg);        /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);            /* IE 9 */
+        transform: rotate(0deg);                /* Firefox 16+, IE 10+, Opera */
     }
-    100% { 
-        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg);  /* IE 9 */
-        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    100% {
+        -webkit-transform: rotate(360deg);      /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);          /* IE 9 */
+        transform: rotate(360deg);              /* Firefox 16+, IE 10+, Opera */
     }
 }
 
 $total-items: 4;
-
 @for $i from 1 through $total-items {
     li:nth-child(#{$i}) {
       animation-delay: .25s * $i;
@@ -127,30 +128,3 @@ $total-items: 4;
         opacity: 1;
     }
 }
-
-
-
-
-
-
-
-
-
-
-/* *,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-html {
-    // 10px div by def of 16px
-    font-size: 62.5%;
-}
-
-body {
-    box-sizing: border-box;
-    background: $colour-secondary;
-} */

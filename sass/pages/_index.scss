@@ -1,0 +1,131 @@
+@media all and (max-width: 989px){
+    .restaurantlist {
+        // background-color: $colour-background-alt;
+        // background-color: blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        li {
+            padding-bottom: 25px;
+        }
+        
+    }
+}
+
+@media all and (min-width: 990px){
+    .sectiontitle {
+        margin-left: -600px;
+    }
+    .restaurantlist {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 700px;
+
+        li {
+            padding-bottom: 30px;
+        }
+    }
+
+}
+
+.mainsection {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $colour-background-alt;
+}
+
+figure {
+    width: 309px;
+    object-fit: cover;
+    box-shadow: 5px 5px 10px $colour-box-shadow;
+    border-radius: $border-radius;
+    margin: 0px;
+    .restaurantpicture {
+        width: 309px;
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+    }
+    figcaption {
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .text {
+            padding: 3px;
+        }
+    }
+    .fa-heart {
+        font-size: 25px;
+        padding-top: 9px;
+    }
+}
+
+#operation {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    @media all and (max-width: 990px){
+        ul {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    ul.operationlist>li {
+        padding: 20px;
+        margin-left: -22px;
+        width: 230px;
+        border-radius: $border-radius;
+        background-color: $colour-background-alt;
+        box-shadow: 5px 5px 10px $colour-box-shadow;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;   
+        .operationbutton__container {
+            width: 0px;
+            /* cette div existe simplement pour que sa div fille, operationnumber (ou la div de l'icône fontawesome), ne pousse pas les autres éléments du bouton; elle a donc une width de 0px */
+            .operationbutton__number {
+                margin-left: -38px;
+                width: 34px;
+                height: 31px;
+                color: white;
+                background-color: $colour-secondary;
+                padding-top: 2px;
+                border-radius: 50%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .operationbutton__icon {
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-left: -12px;
+                width: 30px;
+                /* sur la maquette, la location est centrée, on offset donc le map marker vers la gauche d'autant de pixels qu'il fait de large (26px + 2x10px de padding) pour qu'il n'offset pas la location vers la droite */
+            }
+        }
+        .operationbutton__text {
+            padding-left: 40px;
+        }
+    }
+    ul.operationlist>li:hover {
+        cursor: pointer;
+        @include lighter-background();
+    }
+}
