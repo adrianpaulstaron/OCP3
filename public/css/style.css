@@ -698,6 +698,7 @@ li a:hover figure {
   margin-top: 1px;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   transition: transform 300ms ease-in-out;
   animation-duration: 0.4s;
