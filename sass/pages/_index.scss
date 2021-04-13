@@ -14,7 +14,7 @@
 }
 
 @media all and (min-width: 990px){
-    .sectiontitle {
+    .operation__sectiontitle {
         margin-left: -600px;
     }
     .restaurantlist {
@@ -85,7 +85,7 @@ figure {
             align-items: center;
         }
     }
-    ul.operationlist>li {
+    ul.operation__operationlist>li {
         padding: 20px;
         margin-left: -22px;
         width: 230px;
@@ -99,7 +99,7 @@ figure {
         .operationbutton__container {
             width: 0px;
             /* cette div existe simplement pour que sa div fille, operationnumber (ou la div de l'icône fontawesome), ne pousse pas les autres éléments du bouton; elle a donc une width de 0px */
-            .operationbutton__number {
+            .operationbutton__container__number {
                 margin-left: -38px;
                 width: 34px;
                 height: 31px;
@@ -124,7 +124,7 @@ figure {
             padding-left: 40px;
         }
     }
-    ul.operationlist>li:hover {
+    ul.operation__operationlist>li:hover {
         cursor: pointer;
         @include lighter-background();
     }

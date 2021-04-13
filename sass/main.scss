@@ -43,11 +43,8 @@ li {
     a:hover {
         figure {
             @include darker-colour(background-color, false, $colour-hover, white, 0%);
-            // box-shadow: 15px 15px 15px blue;
         }
     }
-    
-    
 }
 .heartsdiv {
     margin-bottom: 10px;

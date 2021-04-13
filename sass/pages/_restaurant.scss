@@ -22,14 +22,10 @@
 }
 .heartsdivrestaurant:hover {
     .fullheart {
-        // font-size: 21px;
-        // display: block;
         margin-top: -20px;
-        // color: -webkit-linear-gradient($colour-secondary, $colour-primary);
         background: linear-gradient($colour-secondary, $colour-primary);
         background-clip: text;
         -webkit-background-clip: text;
-        // -webkit-text-fill-color: transparent;
         color: transparent;
         transition: transform 300ms ease-in-out;
         text-align: center;
@@ -77,7 +73,7 @@
             width: 100%;
             overflow: hidden;
         }
-        .dishcontainerdiv {
+        .menulistitem__dishcontainerdiv {
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -107,13 +103,13 @@
                 border-bottom-left-radius: $border-radius;
                 border-bottom-right-radius: $border-radius;
                 height: 50%;
-                .dishtext {
+                .dishdescription__dishtext {
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
                     padding-right: 10px;
                 }
-                .dishprice {
+                .dishdescription__dishprice {
                     display: flex;
                     flex-direction: row;
                     justify-content: flex-end;
@@ -121,11 +117,11 @@
                     border-bottom-right-radius: $border-radius;
                     height: 100%;
                     font-weight: bold;
-                    padding:10px;
+                    padding: 10px;
                 }
             }
         }
-        .checkmark {
+        .menulistitem__checkmark {
             overflow: hidden;
             transition: width 0.2s ease-in-out;
             width: 0px;
@@ -136,7 +132,6 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            // align-items: center;
             .fa-check{
                 transform: rotate(0deg);
                 font-size: 15px;
@@ -154,10 +149,11 @@
 
         .menulistitem:hover {
             cursor: pointer;
-            .dishcontainerdiv {
+            .menulistitem__dishcontainerdiv {
                 width: 80%;
+                transition: width 0.2s ease-in-out;
             }
-            .checkmark {
+            .menulistitem__checkmark {
                 transition: width 0.2s ease-in-out;
                 width: 20%;
                 margin-right: -1px;
@@ -173,9 +169,6 @@
                     transform: rotate(360deg);
                     transition: transform 250ms ease-in-out;
                 }
-            }
-            .dishcontainerdiv {
-                transition: width 0.2s ease-in-out;
             }
         }
     }
@@ -199,31 +192,3 @@
     justify-content: flex-start;
     margin-right: 275px;
 }
-
-// .restaurantheart {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-// }
-// .restaurantheart{
-//     .heartsdiv {
-//         .emptyheart {
-//             color: $colour-secondary;
-//             position: absolute;
-//         }
-//     }
-//     .heartsdiv:hover {
-//         .fullheart {
-//             // display: block;
-//             color: -webkit-linear-gradient($colour-secondary, $colour-primary);
-//             background: -webkit-linear-gradient($colour-secondary, $colour-primary);
-//             -webkit-background-clip: text;
-//             -webkit-text-fill-color: transparent;
-//             scale: 0.1;
-//             transition: transform 300ms ease-in-out;
-//             transform: scale(8.3);}
-//         .emptyheart {
-//             color: $colour-secondary
-//         }
-//     }
-// }

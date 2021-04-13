@@ -1,62 +1,28 @@
 @charset "UTF-8";
-/* @function lightness-shift($colour) {
-    @if (lightness($colour) < 25%){
-        @return lighten($colour, 10%);
-    }@else{
-        @return darken($colour, 10%);
-    }
-} */
-/* 
-@mixin box-shadow($horizontal-offset, $vertical-offset, $colour){
-    box-shadow: $horizontal-offset $vertical-offset darken($colour, 10%)
-}
- */
-/* @mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
-    text-shadow: $offset $offset $colour;
-}
-
-@mixin border($colour:$colour-primary) {
-    border: .1rem solid $colour;
-}
-
-@mixin img-ratio {
-    width: 100%;
-        display: block;
-        overflow: hidden;
-        padding-top: 56.25%;
-        position: relative;
-        & img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            transform: translate(-50%, -50%);
-        }
-}
-
-@mixin btn {
-    padding: $grid-gutter;
-    @include border;
-    color: $colour-primary;
-    background: $colour-secondary;
-    cursor: pointer;
-    &:hover{
-        background: $colour-primary;
-        color: $colour-accent;
-    }
-    &--full-width {
-        width: 100%;
-        margin: 0 auto;
-    }
-} */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+li:nth-child(1) {
+  animation-delay: 0.25s;
+}
+
+li:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+li:nth-child(3) {
+  animation-delay: 0.75s;
+}
+
+li:nth-child(4) {
+  animation-delay: 1s;
+}
+
 html {
   margin: 0px;
   padding: 0px;
   scroll-behavior: smooth;
 }
 
-.sectiontitle {
+.operation__sectiontitle {
   width: 312px;
 }
 
@@ -99,7 +65,6 @@ li {
   }
   to {
     opacity: 0;
-    display: none;
     z-index: -1000;
   }
 }
@@ -120,39 +85,11 @@ li {
 @keyframes spin {
   0% {
     transform: rotate(0deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
   }
   100% {
     transform: rotate(360deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
   }
 }
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-  }
-  100% {
-    transform: rotate(360deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-  }
-}
-li:nth-child(1) {
-  animation-delay: 0.25s;
-}
-
-li:nth-child(2) {
-  animation-delay: 0.5s;
-}
-
-li:nth-child(3) {
-  animation-delay: 0.75s;
-}
-
-li:nth-child(4) {
-  animation-delay: 1s;
-}
-
 #page-main-index {
   animation-duration: 3s;
   animation-delay: 2s;
@@ -244,7 +181,7 @@ a:active .button {
   justify-content: center;
   align-items: center;
 }
-#logodiv #logo {
+#logodiv #logodiv__logo {
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -418,7 +355,7 @@ footer ul.footerlist > li > a:hover {
   width: 100%;
   overflow: hidden;
 }
-.menulist li .dishcontainerdiv {
+.menulist li .menulistitem__dishcontainerdiv {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -426,7 +363,7 @@ footer ul.footerlist > li > a:hover {
   padding-bottom: 5px;
   transition: width 0.2s ease-in-out;
 }
-.menulist li .dishcontainerdiv .dish {
+.menulist li .menulistitem__dishcontainerdiv .dish {
   padding-left: 15px;
   display: flex;
   flex-direction: row;
@@ -437,10 +374,10 @@ footer ul.footerlist > li > a:hover {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.menulist li .dishcontainerdiv .dishseparator {
+.menulist li .menulistitem__dishcontainerdiv .dishseparator {
   width: 20px;
 }
-.menulist li .dishcontainerdiv .dishdescription {
+.menulist li .menulistitem__dishcontainerdiv .dishdescription {
   padding-left: 15px;
   display: flex;
   flex-direction: row;
@@ -450,13 +387,13 @@ footer ul.footerlist > li > a:hover {
   border-bottom-right-radius: 20px;
   height: 50%;
 }
-.menulist li .dishcontainerdiv .dishdescription .dishtext {
+.menulist li .menulistitem__dishcontainerdiv .dishdescription .dishdescription__dishtext {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   padding-right: 10px;
 }
-.menulist li .dishcontainerdiv .dishdescription .dishprice {
+.menulist li .menulistitem__dishcontainerdiv .dishdescription .dishdescription__dishprice {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -466,7 +403,7 @@ footer ul.footerlist > li > a:hover {
   font-weight: bold;
   padding: 10px;
 }
-.menulist li .checkmark {
+.menulist li .menulistitem__checkmark {
   overflow: hidden;
   transition: width 0.2s ease-in-out;
   width: 0px;
@@ -478,7 +415,7 @@ footer ul.footerlist > li > a:hover {
   flex-direction: column;
   justify-content: center;
 }
-.menulist li .checkmark .fa-check {
+.menulist li .menulistitem__checkmark .fa-check {
   transform: rotate(0deg);
   font-size: 15px;
   color: #99E2D0;
@@ -494,10 +431,11 @@ footer ul.footerlist > li > a:hover {
 .menulist li .menulistitem:hover {
   cursor: pointer;
 }
-.menulist li .menulistitem:hover .dishcontainerdiv {
+.menulist li .menulistitem:hover .menulistitem__dishcontainerdiv {
   width: 80%;
+  transition: width 0.2s ease-in-out;
 }
-.menulist li .menulistitem:hover .checkmark {
+.menulist li .menulistitem:hover .menulistitem__checkmark {
   transition: width 0.2s ease-in-out;
   width: 20%;
   margin-right: -1px;
@@ -506,16 +444,13 @@ footer ul.footerlist > li > a:hover {
   background-color: #99E2D0;
   color: white;
 }
-.menulist li .menulistitem:hover .checkmark .fa-check {
+.menulist li .menulistitem:hover .menulistitem__checkmark .fa-check {
   font-size: 15px;
   color: #99E2D0;
   border-radius: 50%;
   background-color: white;
   transform: rotate(360deg);
   transition: transform 250ms ease-in-out;
-}
-.menulist li .menulistitem:hover .dishcontainerdiv {
-  transition: width 0.2s ease-in-out;
 }
 
 #restaurantname {
@@ -549,7 +484,7 @@ footer ul.footerlist > li > a:hover {
   }
 }
 @media all and (min-width: 990px) {
-  .sectiontitle {
+  .operation__sectiontitle {
     margin-left: -600px;
   }
 
@@ -619,7 +554,7 @@ figure .fa-heart {
     align-items: center;
   }
 }
-#operation ul.operationlist > li {
+#operation ul.operation__operationlist > li {
   padding: 20px;
   margin-left: -22px;
   width: 230px;
@@ -631,11 +566,11 @@ figure .fa-heart {
   align-items: center;
   margin-bottom: 20px;
 }
-#operation ul.operationlist > li .operationbutton__container {
+#operation ul.operation__operationlist > li .operationbutton__container {
   width: 0px;
   /* cette div existe simplement pour que sa div fille, operationnumber (ou la div de l'icône fontawesome), ne pousse pas les autres éléments du bouton; elle a donc une width de 0px */
 }
-#operation ul.operationlist > li .operationbutton__container .operationbutton__number {
+#operation ul.operation__operationlist > li .operationbutton__container .operationbutton__container__number {
   margin-left: -38px;
   width: 34px;
   height: 31px;
@@ -648,17 +583,17 @@ figure .fa-heart {
   justify-content: center;
   align-items: center;
 }
-#operation ul.operationlist > li .operationbutton__container .operationbutton__icon {
+#operation ul.operation__operationlist > li .operationbutton__container .operationbutton__icon {
   padding-left: 20px;
   padding-right: 20px;
   margin-left: -12px;
   width: 30px;
   /* sur la maquette, la location est centrée, on offset donc le map marker vers la gauche d'autant de pixels qu'il fait de large (26px + 2x10px de padding) pour qu'il n'offset pas la location vers la droite */
 }
-#operation ul.operationlist > li .operationbutton__text {
+#operation ul.operation__operationlist > li .operationbutton__text {
   padding-left: 40px;
 }
-#operation ul.operationlist > li:hover {
+#operation ul.operation__operationlist > li:hover {
   cursor: pointer;
   background-color: #f2eafb;
 }
