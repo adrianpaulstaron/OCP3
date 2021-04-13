@@ -64,32 +64,32 @@ li {
     border: 8px solid  transparent;
     border-radius: 50%;
     border-top-color: $colour-primary;
-    -webkit-animation: spin 1.5s infinite;
+
             animation: spin 1.5s infinite;
 }
 
-@-webkit-keyframes spin {
+@keyframes spin {
     0% { 
-        -webkit-transform: rotate(0deg);        /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg);            /* IE 9 */
-        transform: rotate(0deg);                /* Firefox 16+, IE 10+, Opera */
+        transform: rotate(0deg);        /* Chrome, Opera 15+, Safari 3.1+ */
+        // -ms-transform: rotate(0deg);            /* IE 9 */
+        // transform: rotate(0deg);                /* Firefox 16+, IE 10+, Opera */
     }
     100% { 
-        -webkit-transform: rotate(360deg);      /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg);          /* IE 9 */
-        transform: rotate(360deg);              /* Firefox 16+, IE 10+, Opera */
+        transform: rotate(360deg);      /* Chrome, Opera 15+, Safari 3.1+ */
+        // -ms-transform: rotate(360deg);          /* IE 9 */
+        // transform: rotate(360deg);              /* Firefox 16+, IE 10+, Opera */
     }
 }
 @keyframes spin {
     0% { 
-        -webkit-transform: rotate(0deg);        /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg);            /* IE 9 */
-        transform: rotate(0deg);                /* Firefox 16+, IE 10+, Opera */
+        transform: rotate(0deg);        /* Chrome, Opera 15+, Safari 3.1+ */
+        // -ms-transform: rotate(0deg);            /* IE 9 */
+        // transform: rotate(0deg);                /* Firefox 16+, IE 10+, Opera */
     }
     100% {
-        -webkit-transform: rotate(360deg);      /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg);          /* IE 9 */
-        transform: rotate(360deg);              /* Firefox 16+, IE 10+, Opera */
+        transform: rotate(360deg);      /* Chrome, Opera 15+, Safari 3.1+ */
+        // -ms-transform: rotate(360deg);          /* IE 9 */
+        // transform: rotate(360deg);              /* Firefox 16+, IE 10+, Opera */
     }
 }
 
@@ -115,7 +115,7 @@ $total-items: 4;
 }
 
 // Keyframe animation
-@-webkit-keyframes fadeIn {
+@keyframes fadeIn {
     0% {
         opacity: 0;
         top: 100px;

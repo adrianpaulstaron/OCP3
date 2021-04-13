@@ -59,18 +59,11 @@ li {
 }
 .heartsdiv:hover {
     .fullheart {
-        // font-size: 21px;
-        // display: block;
         margin-top: 1px;
-        // color: -webkit-linear-gradient($colour-secondary, $colour-primary);
-        background: -webkit-linear-gradient($colour-secondary, $colour-primary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        // scale: 0.1;
+        background: linear-gradient($colour-secondary, $colour-primary);
+        background-clip: text;
         color: transparent;
         transition: transform 300ms ease-in-out;
-        // transform: scale(8.3);
-
         animation-duration: 0.4s;
         animation-name: fill;
         animation-fill-mode: forwards;
