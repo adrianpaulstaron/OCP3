@@ -328,7 +328,7 @@ footer .footericon {
   height: 20px;
 }
 footer .handshake {
-  rotate: -45deg;
+  transform: rotate(-45deg);
   font-size: 15px;
 }
 footer ul.footerlist > li {

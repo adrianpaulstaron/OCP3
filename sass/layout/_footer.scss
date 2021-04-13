@@ -16,7 +16,8 @@ footer {
         height: 20px;
     }
     .handshake {
-        rotate: -45deg;
+        transform: rotate(-45deg);
+        // rotate: -45deg;
         font-size: 15px;
     }
     ul.footerlist>li{
