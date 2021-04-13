@@ -366,9 +366,10 @@ footer ul.footerlist > li > a:hover {
 }
 
 .heartsdivrestaurant:hover .fullheart {
-  margin-top: -19px;
+  margin-top: -20px;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   transition: transform 300ms ease-in-out;
   text-align: center;
