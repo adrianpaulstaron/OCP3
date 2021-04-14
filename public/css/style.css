@@ -22,7 +22,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.operation__sectiontitle {
+.sectiontitle {
   width: 312px;
 }
 
@@ -484,7 +484,7 @@ footer ul.footerlist > li > a:hover {
   }
 }
 @media all and (min-width: 990px) {
-  .operation__sectiontitle {
+  .sectiontitle {
     margin-left: -600px;
   }
 
@@ -554,7 +554,7 @@ figure .fa-heart {
     align-items: center;
   }
 }
-#operation ul.operation__operationlist > li {
+#operation ul.operation__list > li {
   padding: 20px;
   margin-left: -22px;
   width: 230px;
@@ -566,11 +566,11 @@ figure .fa-heart {
   align-items: center;
   margin-bottom: 20px;
 }
-#operation ul.operation__operationlist > li .operationbutton__container {
+#operation ul.operation__list > li .operation__list__container {
   width: 0px;
   /* cette div existe simplement pour que sa div fille, operationnumber (ou la div de l'icône fontawesome), ne pousse pas les autres éléments du bouton; elle a donc une width de 0px */
 }
-#operation ul.operation__operationlist > li .operationbutton__container .operationbutton__container__number {
+#operation ul.operation__list > li .operation__list__container .operation__list__container__number {
   margin-left: -38px;
   width: 34px;
   height: 31px;
@@ -583,17 +583,17 @@ figure .fa-heart {
   justify-content: center;
   align-items: center;
 }
-#operation ul.operation__operationlist > li .operationbutton__container .operationbutton__icon {
+#operation ul.operation__list > li .operation__list__container .operationbutton__icon {
   padding-left: 20px;
   padding-right: 20px;
   margin-left: -12px;
   width: 30px;
   /* sur la maquette, la location est centrée, on offset donc le map marker vers la gauche d'autant de pixels qu'il fait de large (26px + 2x10px de padding) pour qu'il n'offset pas la location vers la droite */
 }
-#operation ul.operation__operationlist > li .operationbutton__text {
+#operation ul.operation__list > li .operation__list__text {
   padding-left: 40px;
 }
-#operation ul.operation__operationlist > li:hover {
+#operation ul.operation__list > li:hover {
   cursor: pointer;
   background-color: #f2eafb;
 }

@@ -94,7 +94,7 @@ ul.operationlist>li:hover {
     background: #f0e5ff;
 }
 
-.operationbutton__container {
+.operation__list__container {
     width: 0px;
     /* cette div existe simple pour que sa div fille, operationnumber (ou la div de l'icône fontawesome), ne pousse pas les autres éléments du bouton; elle a donc une width de 0px */
 }
@@ -121,7 +121,7 @@ ul.operationlist>li:hover {
     align-items: center;
 }
 
-.operationbutton__text {
+.operation__list__text {
     padding-left: 40px;
 }
 

@@ -14,7 +14,10 @@
 }
 
 @media all and (min-width: 990px){
-    .operation__sectiontitle {
+    .sectiontitle {
+        margin-left: -600px;
+    }
+    .sectiontitle {
         margin-left: -600px;
     }
     .restaurantlist {
@@ -85,7 +88,7 @@ figure {
             align-items: center;
         }
     }
-    ul.operation__operationlist>li {
+    ul.operation__list>li {
         padding: 20px;
         margin-left: -22px;
         width: 230px;
@@ -96,10 +99,10 @@ figure {
         flex-direction: row;
         align-items: center;
         margin-bottom: 20px;   
-        .operationbutton__container {
+        .operation__list__container {
             width: 0px;
             /* cette div existe simplement pour que sa div fille, operationnumber (ou la div de l'icône fontawesome), ne pousse pas les autres éléments du bouton; elle a donc une width de 0px */
-            .operationbutton__container__number {
+            .operation__list__container__number {
                 margin-left: -38px;
                 width: 34px;
                 height: 31px;
@@ -120,11 +123,11 @@ figure {
                 /* sur la maquette, la location est centrée, on offset donc le map marker vers la gauche d'autant de pixels qu'il fait de large (26px + 2x10px de padding) pour qu'il n'offset pas la location vers la droite */
             }
         }
-        .operationbutton__text {
+        .operation__list__text {
             padding-left: 40px;
         }
     }
-    ul.operation__operationlist>li:hover {
+    ul.operation__list>li:hover {
         cursor: pointer;
         @include lighter-background();
     }
