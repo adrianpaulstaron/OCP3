@@ -1,0 +1,194 @@
+.newtag {
+    margin-top: -32px;
+    position: relative;
+    width: 70px;
+    text-align: center;
+    top: 50px; 
+    left: 205px;
+    border-radius: 4px;
+    padding: 8px;
+    padding-bottom: 7px;
+    background-color: $color-accent;
+    @include darker-colour(color, false, $color-accent, white, 40%);
+}
+
+.heartsdivrestaurant {
+    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heartsdivrestaurant:hover {
+    .fullheart {
+        margin-top: -20px;
+        background: linear-gradient($colour-secondary, $colour-primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: transform 300ms ease-in-out;
+        text-align: center;
+        animation-duration: 0.4s;
+        animation-name: fillrestaurant;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fillrestaurant {
+        from {
+                font-size: 0px;
+            }
+            to {
+                font-size: 17px;
+            }
+        }
+}
+
+.fullheartrestaurant {
+    margin: -19px;
+}
+
+.menulist {
+    padding: 0px; 
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    li {
+        margin-right: 10px;
+        box-shadow: 5px 5px 10px $colour-box-shadow;
+        margin-bottom: 25px;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: $border-radius;
+        background-color: $colour-background;
+        overflow: hidden;
+        width: 100%;
+        min-width: 280px;
+        max-width: 300px;
+        .menulistitem {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            overflow: hidden;
+        }
+        .menulistitem__dishcontainerdiv {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            transition: width 0.2s ease-in-out;
+            .dish {
+                padding-left: 15px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border-top-left-radius: $border-radius;
+                border-top-right-radius: $border-radius;
+                height: 50%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .dishseparator {
+                width: 20px;
+            }
+            .dishdescription {
+                padding-left: 15px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom-left-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
+                height: 50%;
+                .dishdescription__dishtext {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    padding-right: 10px;
+                }
+                .dishdescription__dishprice {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: end;
+                    border-bottom-right-radius: $border-radius;
+                    height: 100%;
+                    font-weight: bold;
+                    padding: 10px;
+                }
+            }
+        }
+        .menulistitem__checkmark {
+            overflow: hidden;
+            transition: width 0.2s ease-in-out;
+            width: 0px;
+            border-top-right-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+            background-color: $color-accent;
+            color: white;            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .fa-check{
+                transform: rotate(0deg);
+                font-size: 15px;
+                color: $color-accent;
+                border-radius: 50%;
+                margin-left: 12px;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $colour-background;
+            }
+        }
+
+        .menulistitem:hover {
+            cursor: pointer;
+            .menulistitem__dishcontainerdiv {
+                width: 80%;
+                transition: width 0.2s ease-in-out;
+            }
+            .menulistitem__checkmark {
+                transition: width 0.2s ease-in-out;
+                width: 20%;
+                margin-right: -1px;
+                border-top-right-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
+                background-color: $color-accent;
+                color: white;
+                .fa-check {
+                    font-size: 15px;
+                    color: $color-accent;
+                    border-radius: 50%;
+                    background-color: $colour-background;
+                    transform: rotate(360deg);
+                    transition: transform 250ms ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+#restaurantname {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .fa-heart {
+        font-size: 20px;
+    }
+}
+
+.arrowdiv {
+    position: absolute;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-right: 275px;
+}
